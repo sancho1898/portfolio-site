@@ -138,3 +138,8 @@ main, .site-footer { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
   main, .site-footer { padding: 0 16px; }
   .section.alt { padding-left: 16px; padding-right: 16px; margin: 0 -16px; }
 }
+
+/* visuals */
+.visual { margin: 16px 0 4px; }
+.visual img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
+.visual figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
