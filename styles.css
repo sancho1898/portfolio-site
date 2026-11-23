@@ -151,3 +151,6 @@ main, .site-footer { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 }
 .card figure.visual { margin-top: 0; }
 .recognition p + p { margin-top: 10px; }
+.sub-heading { font-size: 1.25rem; margin: 48px 0 16px; }
+.card a { color: var(--accent); }
+.card p a { font-weight: 600; }
