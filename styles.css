@@ -143,3 +143,11 @@ main, .site-footer { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 .visual { margin: 16px 0 4px; }
 .visual img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
 .visual figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+
+/* tags on cards (agentic section) */
+.card .tag {
+  display: inline-block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--accent); margin-bottom: 6px;
+}
+.card figure.visual { margin-top: 0; }
+.recognition p + p { margin-top: 10px; }

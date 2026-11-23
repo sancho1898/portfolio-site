@@ -1,0 +1,56 @@
+<svg viewBox="0 0 960 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conceptual flow of the check-in agent skill: context intake, approved retrieval, deterministic math, source-linked draft, human review">
+  <rect x="0" y="0" width="960" height="200" rx="12" fill="#f5f7fa"/>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#1f5fbf"/>
+    </marker>
+  </defs>
+
+  <!-- step 1 -->
+  <rect x="11" y="56" width="170" height="120" rx="12" fill="#ffffff" stroke="#e2e7ee"/>
+  <text x="26" y="82" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f5fbf">01</text>
+  <text x="26" y="104" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#1b2430">Context intake</text>
+  <text x="26" y="128" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#5b6573">Scope, period and</text>
+  <text x="26" y="144" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#5b6573">definitions agreed</text>
+  <text x="26" y="160" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#5b6573">before any draft</text>
+
+  <line x1="182" y1="116" x2="202" y2="116" stroke="#1f5fbf" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- step 2 -->
+  <rect x="203" y="56" width="170" height="120" rx="12" fill="#ffffff" stroke="#e2e7ee"/>
+  <text x="218" y="82" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f5fbf">02</text>
+  <text x="218" y="104" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#1b2430">Approved retrieval</text>
+  <text x="218" y="128" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#5b6573">Only approved MCP</text>
+  <text x="218" y="144" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#5b6573">or SDK data paths</text>
+  <text x="218" y="160" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#5b6573">are used</text>
+
+  <line x1="374" y1="116" x2="394" y2="116" stroke="#1f5fbf" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- step 3 -->
+  <rect x="395" y="56" width="170" height="120" rx="12" fill="#ffffff" stroke="#e2e7ee"/>
+  <text x="410" y="82" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f5fbf">03</text>
+  <text x="410" y="104" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#1b2430">Deterministic math</text>
+  <text x="410" y="128" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#5b6573">Comparisons are</text>
+  <text x="410" y="144" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#5b6573">calculated in code,</text>
+  <text x="410" y="160" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#5b6573">not by the model</text>
+
+  <line x1="566" y1="116" x2="586" y2="116" stroke="#1f5fbf" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- step 4 -->
+  <rect x="587" y="56" width="170" height="120" rx="12" fill="#ffffff" stroke="#e2e7ee"/>
+  <text x="602" y="82" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f5fbf">04</text>
+  <text x="602" y="104" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#1b2430">Source-linked draft</text>
+  <text x="602" y="128" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#5b6573">Every claim links</text>
+  <text x="602" y="144" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#5b6573">back to the data</text>
+  <text x="602" y="160" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#5b6573">it came from</text>
+
+  <line x1="758" y1="116" x2="778" y2="116" stroke="#1f5fbf" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- step 5 -->
+  <rect x="779" y="56" width="170" height="120" rx="12" fill="#1f5fbf"/>
+  <text x="794" y="82" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">05</text>
+  <text x="794" y="104" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Human review</text>
+  <text x="794" y="128" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#ffffff">A person reviews</text>
+  <text x="794" y="144" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#ffffff">and approves before</text>
+  <text x="794" y="160" font-family="-apple-system, Segoe UI, Arial, sans-serif" font-size="12" fill="#ffffff">anything is shared</text>
+</svg>

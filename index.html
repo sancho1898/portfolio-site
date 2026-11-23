@@ -14,6 +14,7 @@
   <nav class="nav" aria-label="Main">
     <a href="#expect">What to expect</a>
     <a href="#work">Work</a>
+    <a href="#agentic">Agentic work</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
@@ -132,6 +133,38 @@
     </div>
   </section>
 
+  <!-- AGENTIC WORK -->
+  <section id="agentic" class="section">
+    <h2>Agentic work</h2>
+    <p class="section-intro">I build AI agent skills: small, reviewable workflows that gather context, use approved data, do the arithmetic in code, and leave the final call to a person.</p>
+
+    <div class="case">
+      <div class="case-head"><span class="tag">Delivered</span><h3>A reliability check-in skill with human review</h3></div>
+      <p>I built the skill and its Python prototype for monthly reliability check-ins. It gathers context first, draws on multiple data sources and dashboards through approved MCP and SDK paths, calculates comparisons in code, and drafts a narrative where each claim links to its source. The automation generates a draft file in a shared folder that the team uses as the reference for check-ins. A reviewer approves each draft before use.</p>
+      <figure class="visual"><img src="visuals/agent-skill-flow.svg" alt="Flow of the check-in skill: context intake, approved retrieval, deterministic math, source-linked draft, human review" loading="lazy"><figcaption>Conceptual flow of the check-in skill. This is a diagram, not a screenshot.</figcaption></figure>
+    </div>
+
+    <div class="grid three">
+      <article class="card">
+        <span class="tag">Shipped · used by repo users</span>
+        <h3>An environment-aware investigation skill</h3>
+        <p>I built guided evidence retrieval for log investigation, with environment routing and bounded Python helpers. It is shipped and in use by repo users.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Team practice</span>
+        <h3>Copilot-assisted recurring work</h3>
+        <p>I introduced Copilot-assisted workflows for code review, data analysis and document drafting, so recurring engineering and program tasks need less manual preparation. The owner checks the output before it's used.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Exploration</span>
+        <h3>Copilot Studio for agent use cases</h3>
+        <p>I explored Copilot Studio for AI agent use cases. This was exploratory and did not become a deployed agent.</p>
+      </article>
+    </div>
+
+    <p class="note">How I design these: the agent proposes and a person decides. Numbers come from code, not generated text. Every claim has a source, and nothing goes out unreviewed.</p>
+  </section>
+
   <!-- SKILLS -->
   <section id="skills" class="section">
     <h2>Skills</h2>
@@ -157,7 +190,7 @@
       <article class="card">
         <h3>AI and forecasting</h3>
         <ul class="chips">
-          <li>LLM-assisted summaries</li><li>Prompt engineering</li><li>Azure OpenAI</li><li>ML forecasting integration</li><li>Human-in-the-loop review</li>
+          <li>Agent skill design</li><li>MCP and SDK retrieval design</li><li>LLM-assisted summaries</li><li>Prompt engineering</li><li>Azure OpenAI</li><li>Copilot Studio (exploratory)</li><li>ML forecasting integration</li><li>Human-in-the-loop review</li>
         </ul>
       </article>
       <article class="card">
@@ -192,15 +225,16 @@
     <div class="recognition">
       <h3>Leadership and community</h3>
       <p>Member of the Microsoft Aspire Leadership Council (2024–2026), where I plan and host sessions for early-career talent, mentor interns and new hires, and support intern conversions.</p>
+      <p>Rotaract Club of Mumbai (Jul 2017 – May 2021): Vice President in 2019–20, leading a team of 15 and mentoring 10 directors. Earlier, I was Director of Community Services and Director of Professional Development (2018–19). Flagship programs I helped run included Talent Fiesta and Challenging Challenges, a disability inclusion program, and X-pressions, which reached 4,000+ children.</p>
     </div>
   </section>
 
 <section id="projects" class="section">
     <h2>Projects and honors</h2>
     <div class="grid three">
-      <article class="card"><h3>Smart and Secure Locker System</h3><p>Publication. <em>Project details to add: what it does, your role, and the outcome.</em></p></article>
+      <article class="card"><h3>Smart and Secure Locker System</h3><p>Published research (SSRN, Elsevier, May 2020): an IoT locker security system that uses computer vision and a Raspberry Pi. It flags unauthorized users within 14 seconds and sends the owner an image alert so they can approve or deny access remotely.</p></article>
       <article class="card"><h3>Certification</h3><p>Automatic Machine Learning with H2O AutoML and Python.</p></article>
-      <article class="card"><h3>Honors</h3><p>Microsoft: Best Rookie (2017–18), Legacy Award (2017–18), Best Board of Director (2018–19), Legacy Award (2018–19), Best Team Player (2019–20). Rotaract Club of Mumbai.</p></article>
+      <article class="card"><h3>Honors</h3><p>Rotaract Club of Mumbai: Best Rookie (2017–18), Legacy Award (2017–18 and 2018–19), Best Board of Director (2018–19), Best Team Player (2019–20).</p></article>
     </div>
   </section>
 
