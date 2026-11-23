@@ -47,15 +47,15 @@
     <div class="grid four">
       <article class="card">
         <h3>I start with the decision</h3>
-        <p>Before anything gets built, I ask which decision the number will inform and who will act on it.</p>
+        <p>Before I build anything, I ask two questions: what decision will this number help someone make, and who will act on that decision?</p>
       </article>
       <article class="card">
         <h3>I surface disagreement early</h3>
-        <p>When stakeholders need different things, I put their requirements side by side and design for all of them, so conflicts don't become rework later.</p>
+        <p>When stakeholders need different things, I put their requirements side by side and design for all of them, so conflicts surface early instead of becoming rework later.</p>
       </article>
       <article class="card">
-        <h3>I ship a validated slice first</h3>
-        <p>I test a small, checked version with real users before scaling, and I state clearly what isn't ready yet.</p>
+        <h3>I start small and check it</h3>
+        <p>I test a small version with real users before scaling it up, and I say clearly what isn't ready yet.</p>
       </article>
       <article class="card">
         <h3>I hand off with owners and docs</h3>
@@ -83,7 +83,7 @@
     <div class="case">
       <div class="case-head"><span class="tag">Metric definitions</span><h3>One definition, many stakeholders</h3></div>
       <figure class="visual"><img src="visuals/slides/05-metric-contract.png" alt="Metric definitions: illustrative slide from the interview deck" loading="lazy"><figcaption>From my interview deck: an illustrative reconstruction with placeholder values, not live data or a screenshot.</figcaption></figure>
-      <p>Several queries produced the same output but were tracked differently. I aligned stakeholders on one definition and packaged it as a shared function. Anyone can inspect the logic, nobody can edit it, and copies can't drift.</p>
+      <p>Several queries produced the same output but were tracked differently. I aligned stakeholders on one definition and packaged it as a shared function. Anyone can read the logic, but only the owner can change it, so copies can't drift.</p>
     </div>
 
     <div class="case">
@@ -101,7 +101,7 @@
     <div class="case">
       <div class="case-head"><span class="tag">Platform decision</span><h3>Moving reporting to a unified web platform</h3></div>
       <figure class="visual"><img src="visuals/slides/08-xmla-pilot.png" alt="Platform decision: illustrative slide from the interview deck" loading="lazy"><figcaption>From my interview deck: an illustrative reconstruction with placeholder values, not live data or a screenshot.</figcaption></figure>
-      <p>I led the reporting-side work to move a reliability scorecard from Power BI to a unified web platform. The React and C# migration is complete, and the XMLA migration was part of the reporting-side work. I helped set up the infrastructure with the platform team. The rollout included phased user onboarding, a single-writer data load with a shared cache, a completeness check before publishing, and alerting. Before go-live, the work passed UI, technical leadership, privacy and threat-model reviews.</p>
+      <p>I led the reporting-side work to move a reliability scorecard from Power BI to a unified web platform built with React and C#. The move also included the XMLA migration, which connects the platform to the underlying data models, and I helped set up the infrastructure with the platform team. The rollout was phased: users were onboarded in stages, only one process wrote data while a shared cache served results, each dataset was checked for completeness before publishing, and alerts were set up. Before go-live, the work passed UI, technical leadership, privacy and threat-model reviews.</p>
     </div>
 
     <div class="case">
@@ -113,12 +113,12 @@
     <div class="case">
       <div class="case-head"><span class="tag">Applied AI</span><h3>AI that speeds up reporting without replacing judgment</h3></div>
       <figure class="visual"><img src="visuals/slides/10-practical-ai.png" alt="Applied AI: illustrative slide from the interview deck" loading="lazy"><figcaption>From my interview deck: an illustrative reconstruction with placeholder values, not live data or a screenshot.</figcaption></figure>
-      <p>I generate first-draft trend summaries and AI-generated insights for leadership, and a person checks every number and narrative before release. When production narratives timed out, I traced the cause to model calls running inside the web request. I moved generation off the request path and cached each narrative per data snapshot.</p>
+      <p>I generate first-draft trend summaries and AI-generated insights for leadership, and a person checks every number and narrative before release. When production narratives timed out, I traced the cause to model calls running while the user waited on the page. I moved generation off the request path and cached each narrative per data snapshot.</p>
     </div>
 
     <div class="case">
       <div class="case-head"><span class="tag">Access and security</span><h3>Least privilege on the products I own</h3></div>
-      <p>I moved my products to access-package-only membership and enforced backend access on sensitive reports. I fixed dependency vulnerabilities flagged by scans, and replaced stored access tokens with managed identity and role-based access. I use Privileged Identity Management, so elevated access is time-bound and approved.</p>
+      <p>I moved my products to access-package-only membership (access granted through approved bundles) and enforced backend access on sensitive reports. I fixed dependency vulnerabilities flagged by scans, and replaced stored access tokens with managed identity (services that sign in without stored secrets) and role-based access. I use Privileged Identity Management (PIM), a tool that grants elevated access only for a set time and after approval.</p>
     </div>
 
     <div class="case">
@@ -140,7 +140,7 @@
 
     <div class="case">
       <div class="case-head"><span class="tag">Delivered</span><h3>A reliability check-in skill with human review</h3></div>
-      <p>I built the skill and its Python prototype for monthly reliability check-ins. It gathers context first, draws on multiple data sources and dashboards through approved MCP and SDK paths, calculates comparisons in code, and drafts a narrative where every claim links to its source. The automation generates a draft file in a shared folder, which the team uses as the reference for check-ins. A reviewer approves each draft before use.</p>
+      <p>I built the skill and its Python prototype for monthly reliability check-ins. It gathers context first, draws on multiple data sources and dashboards through approved connection paths (MCP and SDK, the standard ways for AI tools to reach data), calculates comparisons in code, and drafts a narrative where every claim links to its source. The automation generates a draft file in a shared folder, which the team uses as the reference for check-ins. A reviewer approves each draft before use.</p>
       <figure class="visual"><img src="visuals/agent-skill-flow.svg" alt="Flow of the check-in skill: context intake, approved retrieval, deterministic math, source-linked draft, human review" loading="lazy"><figcaption>Conceptual flow of the check-in skill. This is a diagram, not a screenshot.</figcaption></figure>
     </div>
 
@@ -178,25 +178,25 @@
       <article class="card">
         <h3>Data and analytics</h3>
         <ul class="chips">
-          <li>KQL (Kusto)</li><li>SQL</li><li>Power BI and DAX</li><li>Semantic models</li><li>Azure Synapse</li><li>Azure Data Factory</li><li>Dataverse</li><li>ETL and ELT</li><li>Data validation</li>
+          <li>KQL (query language for logs and telemetry)</li><li>SQL</li><li>Power BI and DAX (formula language)</li><li>Semantic models (business-level data layers)</li><li>Azure Synapse</li><li>Azure Data Factory</li><li>Dataverse (business data store)</li><li>ETL and ELT (data loading pipelines)</li><li>Data validation</li>
         </ul>
       </article>
       <article class="card">
         <h3>Engineering</h3>
         <ul class="chips">
-          <li>Python</li><li>Flask</li><li>React</li><li>Azure Functions</li><li>REST and XMLA</li><li>Redis caching</li><li>CI/CD</li><li>Bicep (infrastructure as code)</li>
+          <li>Python</li><li>Flask</li><li>React</li><li>Azure Functions</li><li>REST and XMLA (data-access protocols)</li><li>Redis caching (fast temporary storage)</li><li>CI/CD</li><li>Bicep (infrastructure as code)</li>
         </ul>
       </article>
       <article class="card">
         <h3>AI and forecasting</h3>
         <ul class="chips">
-          <li>Agent skill design</li><li>MCP and SDK retrieval design</li><li>LLM-assisted summaries</li><li>Prompt engineering</li><li>Azure OpenAI</li><li>Copilot Studio (exploratory)</li><li>ML forecasting integration</li><li>Human-in-the-loop review</li>
+          <li>Agent skill design</li><li>MCP and SDK retrieval design (connections from AI tools to approved data)</li><li>LLM-assisted summaries</li><li>Prompt engineering</li><li>Azure OpenAI</li><li>Copilot Studio (exploratory)</li><li>ML forecasting integration</li><li>Human-in-the-loop review</li>
         </ul>
       </article>
       <article class="card">
         <h3>Security and governance</h3>
         <ul class="chips">
-          <li>Access packages</li><li>Managed identity</li><li>Privileged Identity Management</li><li>Threat modeling</li><li>Privacy reviews</li><li>Secure-by-design standards</li>
+          <li>Access packages (approved access bundles)</li><li>Managed identity (sign-in without stored secrets)</li><li>Privileged Identity Management (time-limited admin access)</li><li>Threat modeling (finding attack paths early)</li><li>Privacy reviews</li><li>Secure-by-design standards</li>
         </ul>
       </article>
       <article class="card">
@@ -224,7 +224,7 @@
     </ol>
     <div class="recognition">
       <h3>Leadership and community</h3>
-      <p>Member of the Microsoft Aspire Leadership Council (2024–2026), where I plan and host sessions for early-career talent, mentor interns and new hires, and support intern conversions.</p>
+      <p>Member of the Microsoft Aspire Leadership Council (2024–2026), where I plan and host sessions for early-career talent, mentor interns and new hires, and help interns move into full-time roles.</p>
       <p>Rotaract Club of Mumbai (Jul 2017 – May 2021): Vice President in 2019–20, leading a team of 15 and mentoring 10 directors. Earlier, I served as Director of Community Services and Director of Professional Development (2018–19). I helped run Talent Fiesta and Challenging Challenges, disability inclusion programs, and X-pressions, which reached 4,000+ children.</p>
     </div>
   </section>
@@ -238,7 +238,7 @@
       <article class="card">
         <span class="tag">Jan – Oct 2023 · Team lead</span>
         <h3>Rotary District 5500 consulting engagement</h3>
-        <p>Led a 10-month consulting engagement for Rotary: a go-to-market plan for clubs to partner with local businesses, built on stakeholder interviews with club presidents and business leaders.</p>
+        <p>Led a 10-month consulting engagement for Rotary: a plan for clubs to partner with local businesses, built on stakeholder interviews with club presidents and business leaders.</p>
       </article>
       <article class="card">
         <span class="tag">Oct – Dec 2022</span>
