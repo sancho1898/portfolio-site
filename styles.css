@@ -473,3 +473,42 @@ dialog.lightbox img { display: block; max-width: 94vw; max-height: 90vh; border-
 .cf-nav .cf-pause[hidden] { display: none; }
 .cf-count { margin: 0; min-width: 70px; text-align: center; color: var(--muted); font-size: 0.9rem; }
 .catalog-hint { color: var(--muted); font-size: 0.9rem; margin: -12px 0 14px; }
+
+/* Experience: expandable job entries */
+.timeline details.job summary { cursor: pointer; list-style: none; display: block; }
+.timeline details.job summary::-webkit-details-marker { display: none; }
+.timeline details.job summary::after {
+  content: "Show details"; display: inline-block; margin-left: 10px; font-size: 0.8rem;
+  font-weight: 700; color: var(--accent); vertical-align: middle;
+}
+.timeline details.job[open] summary::after { content: "Hide details"; }
+.timeline details.job summary:hover h4, .timeline details.job summary:focus-visible h4 { color: var(--accent); }
+.timeline details.job summary:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 50%, transparent); outline-offset: 4px; border-radius: 6px; }
+.timeline .job-body { margin-top: 10px; }
+.timeline .job-body > p { margin: 0 0 8px; color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+.timeline .job-points { margin: 0; padding-left: 18px; color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+.timeline .job-points li { margin-bottom: 6px; }
+/* Experience: one-line summary under each title */
+.timeline .job-line { display: block; margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
+.timeline details.job summary::after { display: block; margin: 6px 0 0; }
+
+/* Experience: desktop side panel for job details (opens only on click) */
+.qualification-container > .job-panel {
+  grid-column: 2; grid-row: 1; align-self: start; position: sticky; top: 90px;
+  background: var(--bg); border: 1px solid var(--line); border-top: 4px solid var(--accent);
+  border-radius: var(--radius); padding: 22px; box-shadow: 0 12px 28px rgba(35, 49, 63, 0.1);
+}
+.qualification-container > .job-panel[hidden] { display: none; }
+.job-panel-inner { position: relative; }
+.job-panel .when { display: block; margin-bottom: 6px; }
+.job-panel h4 { margin: 0 0 10px; font-size: 1.05rem; line-height: 1.35; padding-right: 28px; }
+.job-panel .job-points { margin: 0; padding-left: 18px; color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+.job-panel .job-points li { margin-bottom: 8px; }
+.job-panel-close {
+  position: absolute; top: -8px; right: -4px; background: none; border: none; cursor: pointer;
+  font-size: 1.8rem; line-height: 1; color: var(--muted);
+}
+.job-panel-close:hover { color: var(--ink); }
+.qualification-container.panel-open > .qual-col:nth-child(2) { grid-column: 1 / -1; grid-row: 2; }
+.timeline details.job summary.is-active::after { content: "Hide details"; }
+@media (max-width: 900px) { .qualification-container > .job-panel { display: none !important; } }

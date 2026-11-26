@@ -269,3 +269,47 @@
     start();
   }
 })();
+
+// Experience: on desktop, "Show details" opens the bullets in a side panel and moves Education below.
+(function () {
+  const box = document.querySelector('.qualification-container');
+  const panel = box && box.querySelector('.job-panel');
+  if (!box || !panel) return;
+  const wide = window.matchMedia('(min-width: 901px)');
+  const jobs = Array.from(box.querySelectorAll('details.job'));
+
+  function reset() {
+    jobs.forEach(d => { d.querySelector('summary').classList.remove('is-active'); d.dataset.active = ''; });
+  }
+  function close() {
+    reset();
+    box.classList.remove('panel-open');
+    panel.hidden = true;
+    panel.innerHTML = '';
+  }
+  function open(d) {
+    reset();
+    d.dataset.active = '1';
+    d.querySelector('summary').classList.add('is-active');
+    const when = d.querySelector('.when').textContent;
+    const title = d.querySelector('h4').textContent;
+    const points = d.querySelector('.job-points').innerHTML;
+    panel.innerHTML = '<div class="job-panel-inner"><button type="button" class="job-panel-close" aria-label="Close details">&times;</button>' +
+      '<span class="when"></span><h4></h4><ul class="job-points"></ul></div>';
+    panel.querySelector('.when').textContent = when;
+    panel.querySelector('h4').textContent = title;
+    panel.querySelector('.job-points').innerHTML = points;
+    panel.querySelector('.job-panel-close').addEventListener('click', close);
+    panel.hidden = false;
+    box.classList.add('panel-open');
+  }
+
+  jobs.forEach(d => {
+    d.querySelector('summary').addEventListener('click', e => {
+      if (!wide.matches) return;          // phones keep the in-place expand
+      e.preventDefault();
+      if (d.dataset.active === '1') close(); else open(d);
+    });
+  });
+  window.addEventListener('resize', () => { if (!wide.matches) close(); });
+})();
