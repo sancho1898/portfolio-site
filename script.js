@@ -144,3 +144,128 @@
   });
   dlg.addEventListener('click', () => dlg.close());
 })();
+
+// Carousels: centre card in focus, loops forever, auto-rotates, swipe or arrows.
+(function () {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ROTATE_MS = 5000;
+
+  document.querySelectorAll('[data-cf]').forEach(init);
+
+  function init(cf) {
+    const items = Array.from(cf.children);
+    items.forEach(el => el.classList.add('cf-item'));
+    if (cf.dataset.height) cf.style.setProperty('--cf-h', cf.dataset.height + 'px');
+
+    const nav = document.createElement('div');
+    nav.className = 'cf-nav';
+    nav.innerHTML = '<button type="button" class="cf-prev" aria-label="Previous">&#8249;</button>' +
+      '<button type="button" class="cf-pause" aria-label="Pause rotation">Pause</button>' +
+      '<p class="cf-count" aria-live="off"></p>' +
+      '<button type="button" class="cf-next" aria-label="Next">&#8250;</button>';
+    cf.insertAdjacentElement('afterend', nav);
+    const count = nav.querySelector('.cf-count');
+    const pauseBtn = nav.querySelector('.cf-pause');
+
+    const autoplay = cf.hasAttribute('data-autoplay') && !reduce;
+    let autoOn = autoplay;
+    let hovering = false;
+    let cur = 0;
+    let timer = null;
+    let dragX = null;
+    let dragged = false;
+
+    if (!autoplay) pauseBtn.hidden = true;
+
+    const list = () => items.filter(el => !el.classList.contains('hidden'));
+
+    function layout() {
+      const L = list();
+      const n = L.length;
+      nav.hidden = n < 2;
+      if (n === 0) return;
+      if (cur >= n) cur = 0;
+      const sep = (L[0].offsetWidth || 300) * 0.78;
+      const half = n / 2;
+      L.forEach((el, i) => {
+        let d = i - cur;
+        if (d > half) d -= n;      // shortest way round the loop
+        if (d < -half) d += n;
+        const ad = Math.abs(d);
+        el.style.transform = `translate(-50%, -50%) translateX(${d * sep}px) translateZ(${-ad * 140}px) rotateY(${-d * 24}deg) scale(${Math.max(0.7, 1 - ad * 0.08)})`;
+        el.style.opacity = ad > 2 ? '0' : String(1 - ad * 0.25);
+        el.style.pointerEvents = ad > 2 ? 'none' : 'auto';
+        el.style.zIndex = String(100 - ad);
+        el.setAttribute('aria-hidden', d === 0 ? 'false' : 'true');
+      });
+      count.textContent = `${cur + 1} / ${n}`;
+    }
+
+    function go(delta) {
+      const n = list().length;
+      if (n === 0) return;
+      cur = (cur + delta + n) % n;   // wraps: last -> first and first -> last
+      layout();
+    }
+
+    function stop() { clearInterval(timer); timer = null; }
+    function start() {
+      stop();
+      if (autoOn && !hovering) timer = setInterval(() => go(1), ROTATE_MS);
+    }
+
+    nav.querySelector('.cf-prev').addEventListener('click', () => { go(-1); start(); });
+    nav.querySelector('.cf-next').addEventListener('click', () => { go(1); start(); });
+    pauseBtn.addEventListener('click', () => {
+      autoOn = !autoOn;
+      pauseBtn.textContent = autoOn ? 'Pause' : 'Play';
+      pauseBtn.setAttribute('aria-label', autoOn ? 'Pause rotation' : 'Start rotation');
+      start();
+    });
+
+    cf.addEventListener('pointerenter', () => { hovering = true; stop(); });
+    cf.addEventListener('pointerleave', () => { hovering = false; start(); });
+    cf.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+    });
+
+    // Swipe with mouse or touch.
+    cf.addEventListener('pointerdown', e => { dragX = e.clientX; dragged = false; stop(); });
+    cf.addEventListener('pointerup', e => {
+      if (dragX === null) return;
+      const dx = e.clientX - dragX;
+      dragX = null;
+      if (Math.abs(dx) > 8) dragged = true;
+      if (dx < -40) go(1);
+      else if (dx > 40) go(-1);
+      start();
+    });
+    cf.addEventListener('pointercancel', () => { dragX = null; start(); });
+
+    // Tap a neighbour to bring it into focus.
+    cf.addEventListener('click', e => {
+      if (dragged) { dragged = false; return; }
+      const card = e.target.closest('.cf-item');
+      if (!card) return;
+      const L = list();
+      const i = L.indexOf(card);
+      if (i === -1 || i === cur) return;
+      cur = i;
+      layout();
+      start();
+    });
+
+    // Work filters restart the carousel at its first card.
+    if (items[0] && items[0].classList.contains('case')) {
+      document.querySelectorAll('.filter').forEach(b => b.addEventListener('click', () => {
+        cur = 0;
+        setTimeout(layout, 0);
+      }));
+    }
+
+    window.addEventListener('resize', layout);
+    layout();
+    start();
+  }
+})();

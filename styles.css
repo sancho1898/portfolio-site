@@ -204,7 +204,7 @@ main { padding-top: var(--header-h); }
 .skills-box h3 { margin: 0 0 12px; font-size: 1.15rem; }
 
 /* ---------- Experience and education ---------- */
-.qualification-container { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.qualification-container { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; }
 .col-title { display: flex; align-items: center; gap: 10px; font-size: 1.4rem; margin: 0 0 22px; }
 .col-title i { color: var(--accent); font-size: 1.6rem; }
 .timeline { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--line); }
@@ -252,7 +252,7 @@ main { padding-top: var(--header-h); }
 @media (max-width: 900px) {
   .about-container { grid-template-columns: 1fr; gap: 28px; }
   .about-avatar { width: 160px; height: 160px; font-size: 2.8rem; }
-  .qualification-container { grid-template-columns: 1fr; }
+  .qualification-container { grid-template-columns: minmax(0, 1fr); }
   .pillars { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
@@ -422,7 +422,12 @@ dialog.lightbox img { display: block; max-width: 94vw; max-height: 90vh; border-
 .case.hidden, .case.has-visual.hidden { display: none !important; }
 
 /* Round 6: Graduation Year label and leadership cards */
-.edu-card dl > div { grid-template-columns: 150px 1fr; }
+.edu-card dl { min-width: 0; flex: 1 1 auto; }
+.edu-card dl > div { grid-template-columns: 150px minmax(0, 1fr); }
+@media (max-width: 640px) {
+  .edu-card dl > div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .edu-card dt { padding-top: 0; }
+}
 .leadership { margin-top: 44px; }
 .leadership-title { font-size: 1.4rem; margin: 0 0 18px; }
 .leader-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -436,3 +441,35 @@ dialog.lightbox img { display: block; max-width: 94vw; max-height: 90vh; border-
 @media (max-width: 700px) { .leader-grid { grid-template-columns: 1fr; } }
 
 .expect-pillars { margin-top: 0; margin-bottom: 36px; }
+
+/* Carousels: centre card in focus, neighbours angled back, loops and auto-rotates */
+.coverflow {
+  --cf-h: 600px;
+  position: relative; height: var(--cf-h); perspective: 1100px; overflow: hidden;
+  touch-action: pan-y; user-select: none; margin: 0 -8px;
+}
+.coverflow > .cf-item {
+  position: absolute; left: 50%; top: 50%; box-sizing: border-box;
+  width: min(420px, 74vw); height: calc(var(--cf-h) - 40px); margin: 0;
+  padding: 22px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px;
+  background: var(--bg); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+  border-radius: var(--radius); box-shadow: 0 12px 28px rgba(35, 49, 63, 0.1); cursor: pointer;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+.coverflow > .cf-item.hidden { display: none !important; }
+.coverflow > .cf-item .case-head h3 { font-size: 1.1rem; margin: 6px 0 0; }
+.coverflow > .cf-item .case-body { grid-template-columns: 1fr; gap: 12px; margin-top: 6px; }
+.coverflow > .cf-item figure.visual { margin: 0; position: static; grid-column: auto; grid-row: auto; }
+.coverflow > .cf-item figure.visual img { display: block; width: 100%; height: auto; }
+.coverflow > .cert-flip { overflow: visible; }
+.cf-nav { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 12px; }
+.cf-nav[hidden] { display: none; }
+.cf-nav button {
+  min-width: 42px; height: 42px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--accent);
+  background: var(--bg); color: var(--accent); font: inherit; font-weight: 700; font-size: 1.3rem; line-height: 1; cursor: pointer;
+}
+.cf-nav button:hover, .cf-nav button:focus-visible { background: var(--accent); color: var(--accent-ink); outline: none; }
+.cf-nav .cf-pause { font-size: 0.9rem; }
+.cf-nav .cf-pause[hidden] { display: none; }
+.cf-count { margin: 0; min-width: 70px; text-align: center; color: var(--muted); font-size: 0.9rem; }
+.catalog-hint { color: var(--muted); font-size: 0.9rem; margin: -12px 0 14px; }
