@@ -310,3 +310,67 @@ main { padding-top: var(--header-h); }
 .btn.small { padding: 8px 16px; font-size: 0.9rem; margin-top: 6px; }
 @media (max-width: 1020px) { .cert-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .cert-grid { grid-template-columns: 1fr; } .cert-flip { height: 200px; } }
+
+/* ---------- Round 3: photo, logos, case format, filters ---------- */
+.about-avatar { background: none; box-shadow: none; padding: 0; }
+.about-photo {
+  width: 240px; height: 240px; border-radius: 50%; object-fit: cover; object-position: 55% 40%;
+  border: 4px solid var(--bg); box-shadow: 0 16px 40px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+@media (max-width: 900px) { .about-photo { width: 180px; height: 180px; } }
+.about-sub { font-size: 1.35rem; margin: 0 0 14px; color: var(--ink); }
+.grid.two { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 640px) { .grid.two { grid-template-columns: 1fr; } }
+
+.footnote { font-size: 0.88rem; color: var(--muted); margin: 0 0 22px; max-width: 760px; }
+
+/* Filters */
+.filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 28px; }
+.filter {
+  font: inherit; font-size: 0.92rem; padding: 9px 16px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--accent); background: var(--bg); color: var(--accent);
+  transition: background .2s ease, color .2s ease;
+}
+.filter:hover { background: color-mix(in srgb, var(--accent) 12%, var(--bg)); }
+.filter.active { background: var(--accent); color: var(--accent-ink); }
+.filter:focus-visible, .btn:focus-visible, button.btn:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 50%, transparent); outline-offset: 2px; }
+.case.hidden { display: none; }
+
+/* Case format: Problem, What I owned, How it works, Impact */
+.case-body { margin: 16px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+.case-body > div { border-top: 1px solid var(--line); padding-top: 10px; }
+.case-body dt {
+  font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--accent); margin-bottom: 4px;
+}
+.case-body dd { margin: 0; color: var(--ink); font-size: 0.97rem; }
+.case-body .impact { grid-column: 1 / -1; background: var(--alt); border-radius: 10px; padding: 12px 14px; border-top: none; }
+.case-body .impact dd { color: var(--ink); }
+@media (max-width: 640px) { .case-body { grid-template-columns: 1fr; } }
+
+/* Academic toggle */
+.academic { margin-top: 28px; }
+.academic summary {
+  cursor: pointer; font-weight: 700; color: var(--accent); padding: 12px 0; list-style: none;
+}
+.academic summary::before { content: "+ "; }
+.academic[open] summary::before { content: "− "; }
+.academic[open] summary { margin-bottom: 20px; }
+
+/* Org logos in timeline */
+.timeline li { padding-top: 0; }
+.org-logo {
+  display: block; height: 28px; width: auto; max-width: 120px; object-fit: contain; margin: 0 0 6px;
+}
+.org-logo[src$=".svg"] { width: 26px; height: 26px; color: var(--ink); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .org-logo[src$=".svg"] { filter: invert(1); }
+}
+
+/* Certifications: four cards */
+.cert-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+@media (max-width: 1020px) { .cert-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .cert-grid { grid-template-columns: 1fr; } }
+
+/* Copy email button */
+#copy-email.copied { background: var(--accent); color: var(--accent-ink); }
