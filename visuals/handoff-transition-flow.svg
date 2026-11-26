@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%" height="auto" role="img" aria-label="Ownership handoff: single escalation point, documentation and walkthroughs, live office hours, then 17 distributed owners">
+  <style>
+    .bg { fill: #f8fafc; }
+    .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; }
+    .card-accent { fill: #eff6ff; stroke: #3b82f6; stroke-width: 1.5; }
+    .card-warn { fill: #fef2f2; stroke: #fca5a5; stroke-width: 1.5; }
+    .tag { font: 600 10px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #2563eb; letter-spacing: 0.06em; text-transform: uppercase; }
+    .tag-warn { font: 600 10px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #dc2626; letter-spacing: 0.06em; text-transform: uppercase; }
+    .title { font: 700 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #0f172a; }
+    .sub { font: 400 11px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #475569; }
+    .arrow { stroke: #94a3b8; stroke-width: 1.75; fill: none; marker-end: url(#arrowhead); }
+    .badge { fill: #dcfce7; }
+    .badge-text { font: 600 11px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #166534; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94a3b8" />
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="800" height="220" rx="12" />
+  <rect class="card-warn" x="24" y="34" width="165" height="122" rx="10" />
+  <text class="tag-warn" x="38" y="56">Before</text>
+  <text class="title" x="38" y="78">1 Escalation Point</text>
+  <text class="sub" x="38" y="98">Single-owner bottleneck</text>
+  <text class="sub" x="38" y="114">ahead of planned</text>
+  <text class="sub" x="38" y="130">tool retirement</text>
+  <line class="arrow" x1="189" y1="95" x2="215" y2="95" />
+  <rect class="card" x="219" y="34" width="165" height="122" rx="10" />
+  <text class="tag" x="233" y="56">Enablement</text>
+  <text class="title" x="233" y="78">Docs &amp; Walkthrough</text>
+  <text class="sub" x="233" y="98">Written handover guide,</text>
+  <text class="sub" x="233" y="114">recorded demo, and</text>
+  <text class="sub" x="233" y="130">clear runbooks</text>
+  <line class="arrow" x1="384" y1="95" x2="410" y2="95" />
+  <rect class="card" x="414" y="34" width="165" height="122" rx="10" />
+  <text class="tag" x="428" y="56">Transition</text>
+  <text class="title" x="428" y="78">Live Office Hours</text>
+  <text class="sub" x="428" y="98">Guided Q&amp;A and edge-</text>
+  <text class="sub" x="428" y="114">case debugging with</text>
+  <text class="sub" x="428" y="130">incoming leads</text>
+  <line class="arrow" x1="579" y1="95" x2="605" y2="95" />
+  <rect class="card-accent" x="609" y="34" width="167" height="122" rx="10" />
+  <text class="tag" x="623" y="56">After</text>
+  <text class="title" x="623" y="78">17 Distributed Owners</text>
+  <text class="sub" x="623" y="98">Self-serve operations</text>
+  <text class="sub" x="623" y="114">across program and</text>
+  <text class="sub" x="623" y="130">pillar teams</text>
+  <rect class="badge" x="24" y="174" width="752" height="28" rx="6" />
+  <text class="badge-text" x="400" y="192" text-anchor="middle">Operations transitioned to 17 distributed owners with ~80% less routine maintenance overhead</text>
+</svg>
