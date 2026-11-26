@@ -3,47 +3,98 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sanchit Agarwala | Technical Program Manager and Software Engineer</title>
+  <title>Sanchit Agarwala | Technical Program Manager</title>
   <meta name="description" content="Sanchit Agarwala: from messy data to decisions people trust. Technical program management, reliability reporting, data platforms and applied AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sanchit Agarwala | Technical Program Manager">
+  <meta property="og:description" content="From messy data to decisions people trust. Technical program management, reliability reporting, data platforms and applied AI.">
+  <meta property="og:url" content="https://sancho1898.github.io/portfolio-site/">
+  <meta property="og:site_name" content="Sanchit Agarwala">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sanchit Agarwala | Technical Program Manager">
+  <meta name="twitter:description" content="From messy data to decisions people trust. Technical program management, reliability reporting, data platforms and applied AI.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
 </head>
 <body>
 
+<!-- Left social rail (wide screens only) -->
+<aside class="social-rail" aria-label="Social links">
+  <a href="https://www.linkedin.com/in/sanchitagarwala" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+  <a href="mailto:sanchit.agarwala@gmail.com?subject=Hello%20from%20your%20portfolio" aria-label="Email"><i class='bx bxs-envelope'></i></a>
+  <a href="Sanchit_Agarwala_resume.pdf" download aria-label="Download resume"><i class='bx bxs-file-pdf'></i></a>
+</aside>
+
+<!-- Navbar -->
 <header class="site-header">
-  <a class="brand" href="#top">Sanchit Agarwala</a>
-  <nav class="nav" aria-label="Main">
+  <a class="brand" href="#home">Sanchit <span>Agarwala</span></a>
+  <button class="menu-toggle" id="menu-icon" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+    <i class='bx bx-menu'></i>
+  </button>
+  <nav class="navbar" id="site-nav" aria-label="Main">
     <a href="#expect">What to expect</a>
-    <a href="#work">Work</a>
     <a href="#agentic">Agentic work</a>
+    <a href="#work">Work</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<main id="top">
+<main>
 
-  <!-- HERO -->
-  <section class="hero">
-    <p class="eyebrow">Technical Program Manager · Software Engineer</p>
-    <h1>From messy data<br>to decisions people trust.</h1>
-    <p class="lede">I turn scattered reliability data into numbers leadership trusts. At Microsoft I decide what gets measured, align the teams that own the data, and build the platforms people use to make decisions.</p>
-    <div class="cta-row">
-      <a class="btn primary" href="#work">See my work</a>
-      <a class="btn" href="#contact">Get in touch</a>
+  <!-- HOME -->
+  <section class="home section" id="home">
+    <div class="home-text">
+      <span class="eyebrow">Hello, I'm</span>
+      <h1>Sanchit Agarwala</h1>
+      <p class="role" aria-live="off"><span class="typing" id="typing">Technical Program Manager</span></p>
+      <h2 class="tagline">From messy data to decisions people trust.</h2>
+      <p class="lede">I work at the intersection of technical program management, data and reporting, and applied AI: defining the metrics that matter, aligning the teams that own the data, and building reliable reporting and AI workflows that leadership can act on.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
     </div>
-    <div class="pillars" aria-label="How I work">
-      <div class="pillar"><span>01</span><h3>Define</h3><p>What should we measure, and which decision will it support?</p></div>
-      <div class="pillar"><span>02</span><h3>Align</h3><p>What does the number mean, and who owns it?</p></div>
-      <div class="pillar"><span>03</span><h3>Build</h3><p>Can people trust the result, and what happens when it's wrong?</p></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="heading">
+      <span class="label">Introduction</span>
+      <h2>About Me</h2>
+    </div>
+    <div class="about-container">
+      <div class="about-avatar">
+        <img class="about-photo" src="images/headshot.jpg" alt="Sanchit Agarwala">
+      </div>
+      <div class="about-text">
+        <h3 class="about-sub">Program leadership, grounded in data</h3>
+        <p>At Microsoft, I own what gets measured for Azure cloud reliability, align partner teams on shared definitions, and build the reporting platforms people use to make decisions. Previously at Jio Platforms, I led mobile feature planning and release validation for consumer commerce apps serving millions of shoppers.</p>
+        <p>My core depth is across Azure data platforms, reliability reporting, and cross-org program execution, alongside hands-on data work in SQL, KQL and Power BI. I also build AI workflows where code does the arithmetic and a person reviews every output before it reaches leadership.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO BAND -->
+  <section class="intro-band">
+    <div class="intro-text">
+      <h2>Metrics that matter, teams that align, reporting that holds up</h2>
     </div>
   </section>
 
   <!-- WHAT TO EXPECT -->
   <section id="expect" class="section">
-    <h2>What to expect when we work together</h2>
-    <p class="section-intro">If you bring me a reporting problem, a cross-team program or a data question, this is how I'll approach it.</p>
+    <div class="heading">
+      <span class="label">How I work</span>
+      <h2>What to expect when we work together</h2>
+      <p class="section-intro">If you bring me a reporting problem, a cross-team program or a data question, this is how I'll approach it.</p>
+    </div>
+    <div class="pillars expect-pillars" aria-label="How I work">
+      <div class="pillar"><span>01</span><h3>Define</h3><p>What should we measure, and which decision will it support?</p></div>
+      <div class="pillar"><span>02</span><h3>Align</h3><p>What does the number mean, and who owns it?</p></div>
+      <div class="pillar"><span>03</span><h3>Build</h3><p>Can people trust the result, and what happens when it's wrong?</p></div>
+    </div>
     <div class="grid four">
       <article class="card">
         <h3>I start with the decision</h3>
@@ -62,262 +113,418 @@
         <p>Every dashboard, pipeline and definition gets an owner, documentation and monitoring, so it doesn't depend on me.</p>
       </article>
     </div>
-    <p class="note">I'm candid about gaps. I'm strongest in Azure, data and program work, and I'm building depth in AWS and compliance frameworks.</p>
-  </section>
-
-  <!-- WORK -->
-  <section id="work" class="section alt">
-    <h2>Selected work</h2>
-    <p class="section-intro">Examples are generalized to protect confidential details. Figures come from my own records and internal reviews.</p>
-
-    <div class="case">
-      <div class="case-head"><span class="tag">Executive reporting</span><h3>A monthly reliability scorecard that leadership trusts</h3></div>
-      <figure class="visual"><img src="visuals/slides/04-executive-scorecard.png" alt="Executive reporting: illustrative slide from the interview deck" loading="lazy"><figcaption>From my interview deck: an illustrative reconstruction with placeholder values, not live data or a screenshot.</figcaption></figure>
-      <p>I own the executive reliability scorecard: 12+ KPIs used in senior leadership reviews. I align six or more partner teams on definitions, validation and targets, and I maintain the pipelines and models behind it.</p>
-      <ul class="outcomes">
-        <li>Every KPI has a named definition and an owner</li>
-        <li>Monthly review prep dropped from about a day to 1–2 hours, with a generated first draft that a person validates</li>
-      </ul>
-    </div>
-
-    <div class="case">
-      <div class="case-head"><span class="tag">Metric definitions</span><h3>One definition, many stakeholders</h3></div>
-      <figure class="visual"><img src="visuals/slides/05-metric-contract.png" alt="Metric definitions: illustrative slide from the interview deck" loading="lazy"><figcaption>From my interview deck: an illustrative reconstruction with placeholder values, not live data or a screenshot.</figcaption></figure>
-      <p>Several queries produced the same output but were tracked differently. I aligned stakeholders on one definition and packaged it as a shared function. Anyone can read the logic, but only the owner can change it, so copies can't drift.</p>
-    </div>
-
-    <div class="case">
-      <div class="case-head"><span class="tag">Operational health</span><h3>Reliability reporting across services and organizations</h3></div>
-      <figure class="visual"><img src="visuals/slides/06-operational-health.png" alt="Operational health: illustrative slide from the interview deck" loading="lazy"><figcaption>From my interview deck: an illustrative reconstruction with placeholder values, not live data or a screenshot.</figcaption></figure>
-      <p>I built and launched operational health reporting for roughly 25–30 Azure services, used by four organizations across eight service groups. Users start with a heatmap, move to a snapshot or comparison, then drill into the definition behind each KPI.</p>
-    </div>
-
-    <div class="case">
-      <div class="case-head"><span class="tag">Reporting reliability</span><h3>Keep the last complete result visible</h3></div>
-      <figure class="visual"><img src="visuals/slides/07-refresh-last-complete.png" alt="Reporting reliability: illustrative slide from the interview deck" loading="lazy"><figcaption>From my interview deck: an illustrative reconstruction with placeholder values, not live data or a screenshot.</figcaption></figure>
-      <p>A refresh shouldn't turn a trusted dashboard into a "no data" screen. I designed the refresh so the last validated result stays visible while new data loads and is checked. The new result appears only after validation, failures are shown openly, and a cold start with no valid data shows an honest unavailable state.</p>
-    </div>
-
-    <div class="case">
-      <div class="case-head"><span class="tag">Platform decision</span><h3>Moving reporting to a unified web platform</h3></div>
-      <figure class="visual"><img src="visuals/slides/08-xmla-pilot.png" alt="Platform decision: illustrative slide from the interview deck" loading="lazy"><figcaption>From my interview deck: an illustrative reconstruction with placeholder values, not live data or a screenshot.</figcaption></figure>
-      <p>I led the reporting-side work to move a reliability scorecard from Power BI to a unified web platform built with React and C#. The move also included the XMLA migration, which connects the platform to the underlying data models, and I helped set up the infrastructure with the platform team. The rollout was phased: users were onboarded in stages, only one process wrote data while a shared cache served results, each dataset was checked for completeness before publishing, and alerts were set up. Before go-live, the work passed UI, technical leadership, privacy and threat-model reviews.</p>
-    </div>
-
-    <div class="case">
-      <div class="case-head"><span class="tag">Cross-team planning</span><h3>Nine planning tools, one shared vocabulary</h3></div>
-      <figure class="visual"><img src="visuals/slides/09-cross-team-planning.png" alt="Cross-team planning: illustrative slide from the interview deck" loading="lazy"><figcaption>From my interview deck: an illustrative reconstruction with placeholder values, not live data or a screenshot.</figcaption></figure>
-      <p>Planning data was split across fragmented tools with unclear field definitions. I gathered requirements from program owners, aligned definitions and ownership, added pre-alignment checkpoints, and consolidated nine tools into one experience. The broader program's planning cycle moved from 12 to 10 weeks. That outcome was shared, and my contribution was part of it.</p>
-    </div>
-
-    <div class="case">
-      <div class="case-head"><span class="tag">Applied AI</span><h3>AI that speeds up reporting without replacing judgment</h3></div>
-      <figure class="visual"><img src="visuals/slides/10-practical-ai.png" alt="Applied AI: illustrative slide from the interview deck" loading="lazy"><figcaption>From my interview deck: an illustrative reconstruction with placeholder values, not live data or a screenshot.</figcaption></figure>
-      <p>I generate first-draft trend summaries and AI-generated insights for leadership, and a person checks every number and narrative before release. When production narratives timed out, I traced the cause to model calls running while the user waited on the page. I moved generation off the request path and cached each narrative per data snapshot.</p>
-    </div>
-
-    <div class="case">
-      <div class="case-head"><span class="tag">Access and security</span><h3>Least privilege on the products I own</h3></div>
-      <p>I moved my products to access-package-only membership (access granted through approved bundles) and enforced backend access on sensitive reports. I fixed dependency vulnerabilities flagged by scans, and replaced stored access tokens with managed identity (services that sign in without stored secrets) and role-based access. I use Privileged Identity Management (PIM), a tool that grants elevated access only for a set time and after approval.</p>
-    </div>
-
-    <div class="case">
-      <div class="case-head"><span class="tag">Handoff</span><h3>Moving a tool from one owner to many</h3></div>
-      <p>I was the only escalation point for a scorecard the team relied on. Before the retirement date, I wrote a handover guide, ran office hours, recorded a walkthrough, and handed operations to 17 owners across program and pillar teams. The team reports about 80% less routine maintenance, a result I contributed to.</p>
-    </div>
-
-    <div class="case">
-      <div class="case-head"><span class="tag">Product and release</span><h3>Feature planning and release readiness at Jio</h3></div>
-      <figure class="visual"><img src="visuals/slides/11-jio-release.png" alt="Product and release: illustrative slide from the interview deck" loading="lazy"><figcaption>From my interview deck: an illustrative reconstruction with placeholder values, not live data or a screenshot.</figcaption></figure>
-      <p>I owned mobile feature planning and release criteria for consumer shopping apps serving millions of users. I used funnel analysis and A/B testing to set priorities, and led validation and rollback checks across five commerce products. The launch of a faster delivery option was a team outcome.</p>
-    </div>
   </section>
 
   <!-- AGENTIC WORK -->
   <section id="agentic" class="section">
-    <h2>Agentic work</h2>
-    <p class="section-intro">I author reusable Copilot skills: structured, reviewable workflows that gather context, use approved tools and data, do the arithmetic in code and leave the final call to a person.</p>
+    <div class="heading">
+      <span class="label">Agents</span>
+      <h2>Agentic work</h2>
+      <p class="section-intro">I author reusable Copilot skills: structured, reviewable workflows that gather context, use approved tools and data, do the arithmetic in code and leave the final call to a person.</p>
+    </div>
 
     <div class="case">
       <div class="case-head"><span class="tag">Evidence-grounded reporting</span><h3>A reliability check-in skill with human review</h3></div>
-      <p>I designed a reliability check-in skill for monthly reviews. It gathers context first, retrieves data through approved connection paths (MCP and SDK, the standard ways for AI tools to reach data), calculates metric comparisons in code, and drafts a narrative where every claim links to its source. A reviewer approves each draft before use.</p>
+      <p>I designed a reliability check-in skill for monthly reviews. It gathers context first, retrieves data through approved connection paths (the Model Context Protocol (MCP) and software development kits (SDKs), the standard ways for AI tools to reach data), calculates metric comparisons in code, and drafts a narrative where every claim links to its source. A reviewer approves each draft before use.</p>
       <figure class="visual"><img src="visuals/agent-skill-flow.svg" alt="Flow of the check-in skill: context intake, approved retrieval, deterministic math, source-linked draft, human review" loading="lazy"><figcaption>Conceptual flow of the check-in skill. This is a diagram, not a screenshot.</figcaption></figure>
     </div>
 
-    <div class="grid three">
+    <div class="grid two">
       <article class="card">
         <span class="tag">Investigation workflows</span>
         <h3>Environment-aware investigation workflows</h3>
-        <p>I developed workflows with environment-aware, scoped evidence retrieval and bounded Python collectors for investigations.</p>
+        <p>I developed workflows with environment-aware, scoped evidence retrieval for investigations.</p>
       </article>
       <article class="card">
         <span class="tag">Team practice</span>
         <h3>Copilot-assisted recurring work</h3>
-        <p>I introduced Copilot-assisted workflows for code review, data analysis and document drafting, cutting manual preparation in recurring work. Owners check the output before they use it.</p>
-      </article>
-      <article class="card">
-        <span class="tag">Exploration</span>
-        <h3>Copilot Studio for agent use cases</h3>
-        <p>I explored Copilot Studio for agent use cases. The work stayed exploratory and didn't become a deployed agent.</p>
+        <p>I introduced Copilot-assisted workflows for code review, data analysis and document drafting, cutting manual preparation in recurring work. Owners check the output before they use it. I also explored Copilot Studio for agent use cases.</p>
       </article>
     </div>
 
     <p class="note">How I design these: the agent proposes and a person decides. Numbers come from code, not generated text, every claim has a source, and nothing goes out unreviewed.</p>
   </section>
 
+  <!-- WORK -->
+  <section id="work" class="section alt">
+    <div class="heading">
+      <span class="label">Portfolio</span>
+      <h2>Selected work</h2>
+      <p class="section-intro">Filter by the kind of role you're hiring for. Figures come from my own records and internal reviews.</p>
+    </div>
+
+    <p class="footnote"><strong>Note:</strong> Visuals are sanitized architectural reconstructions using placeholder data to protect confidential employer details.</p>
+
+    <div class="filters" role="group" aria-label="Filter case studies by track">
+      <button class="filter active" type="button" data-filter="all">All (10)</button>
+      <button class="filter" type="button" data-filter="tpm">Technical Program Management (8)</button>
+      <button class="filter" type="button" data-filter="data">Data &amp; Analytics (5)</button>
+      <button class="filter" type="button" data-filter="ai">Applied AI &amp; Data Platforms (4)</button>
+    </div>
+
+    <article class="case has-visual" data-tracks="data tpm">
+      <div class="case-head"><span class="tag">Executive reporting</span><h3>A monthly reliability scorecard that leadership trusts</h3></div>
+      <figure class="visual"><img src="visuals/slides/04-executive-scorecard.png" alt="Executive reporting: illustrative slide from the interview deck" loading="lazy"></figure>
+      <dl class="case-body">
+        <div><dt>Problem</dt><dd>Monthly review prep took about a day, and leadership needed every KPI to have a clear definition.</dd></div>
+        <div><dt>What I owned</dt><dd>The executive reliability scorecard: 12+ key performance indicators (KPIs) used in senior leadership reviews. I aligned six or more partner teams on definitions, validation and targets, and maintain the pipelines and models behind it.</dd></div>
+        <div><dt>How it works</dt><dd>Every KPI has a named definition and an owner. A generated first draft is produced, and a person validates it before review.</dd></div>
+        <div class="impact"><dt>Impact</dt><dd><strong>Monthly review prep dropped from about a day to 1–2 hours.</strong></dd></div>
+      </dl>
+    </article>
+
+    <article class="case has-visual" data-tracks="data ai">
+      <div class="case-head"><span class="tag">Metric definitions</span><h3>One definition, many stakeholders</h3></div>
+      <figure class="visual"><img src="visuals/slides/05-metric-contract.png" alt="Metric definitions: illustrative slide from the interview deck" loading="lazy"></figure>
+      <dl class="case-body">
+        <div><dt>Problem</dt><dd>Several queries produced the same output but were tracked as different metrics.</dd></div>
+        <div><dt>What I owned</dt><dd>Aligning stakeholders on one definition.</dd></div>
+        <div><dt>How it works</dt><dd>The definition is kept as one shared definition. Anyone can read it, but only the owner can change it.</dd></div>
+        <div class="impact"><dt>Impact</dt><dd><strong>One governed definition replaces several copies, so they can't drift.</strong></dd></div>
+      </dl>
+    </article>
+
+    <article class="case has-visual" data-tracks="data tpm">
+      <div class="case-head"><span class="tag">Operational health</span><h3>Reliability reporting across services and organizations</h3></div>
+      <figure class="visual"><img src="visuals/slides/06-operational-health.png" alt="Operational health: illustrative slide from the interview deck" loading="lazy"></figure>
+      <dl class="case-body">
+        <div><dt>Problem</dt><dd>Four organizations needed one reliability health view across roughly 25–30 Azure services.</dd></div>
+        <div><dt>What I owned</dt><dd>Building and launching the operational health reporting.</dd></div>
+        <div><dt>How it works</dt><dd>Users start with a heatmap, move to a snapshot or comparison, then drill into the definition behind each KPI.</dd></div>
+        <div class="impact"><dt>Impact</dt><dd><strong>Launched across 25–30 Azure services, used by four organizations across eight service groups.</strong></dd></div>
+      </dl>
+    </article>
+
+    <article class="case has-visual" data-tracks="data tpm">
+      <div class="case-head"><span class="tag">Reporting reliability</span><h3>Keep the last complete result visible</h3></div>
+      <figure class="visual"><img src="visuals/slides/07-refresh-last-complete.png" alt="Reporting reliability: illustrative slide from the interview deck" loading="lazy"></figure>
+      <dl class="case-body">
+        <div><dt>Problem</dt><dd>A refresh turned a trusted dashboard into a "no data" screen.</dd></div>
+        <div><dt>What I owned</dt><dd>Designing the refresh behavior.</dd></div>
+        <div><dt>How it works</dt><dd>The last validated result stays visible while new data loads and is checked. New results appear only after validation, failures are shown openly, and a cold start with no valid data shows an honest unavailable state.</dd></div>
+        <div class="impact"><dt>Impact</dt><dd><strong>Dashboards stay readable during refresh, and failures are visible instead of hidden.</strong></dd></div>
+      </dl>
+    </article>
+
+    <article class="case has-visual" data-tracks="tpm data ai">
+      <div class="case-head"><span class="tag">Platform decision</span><h3>Moving reporting to a unified web platform</h3></div>
+      <figure class="visual"><img src="visuals/slides/08-xmla-pilot.png" alt="Platform decision: illustrative slide from the interview deck" loading="lazy"></figure>
+      <dl class="case-body">
+        <div><dt>Problem</dt><dd>A reliability scorecard ran in Power BI and needed to move to a unified web platform.</dd></div>
+        <div><dt>What I owned</dt><dd>The reporting-side work, and helping set up the infrastructure with the platform team.</dd></div>
+        <div><dt>How it works</dt><dd>Delivered as a web platform. The XMLA migration connects the platform to the underlying data models. Rollout was phased: users onboarded in stages, one process wrote data while a shared cache served results, each dataset was checked for completeness before publishing, and alerts were set up.</dd></div>
+        <div class="impact"><dt>Impact</dt><dd><strong>Cleared user interface (UI), technical leadership, privacy and threat-model reviews before go-live.</strong></dd></div>
+      </dl>
+    </article>
+
+    <article class="case has-visual" data-tracks="tpm">
+      <div class="case-head"><span class="tag">Cross-team planning</span><h3>Nine planning tools, one shared vocabulary</h3></div>
+      <figure class="visual"><img src="visuals/slides/09-cross-team-planning.png" alt="Cross-team planning: illustrative slide from the interview deck" loading="lazy"></figure>
+      <dl class="case-body">
+        <div><dt>Problem</dt><dd>Planning data was split across fragmented tools with unclear field definitions.</dd></div>
+        <div><dt>What I owned</dt><dd>Gathering requirements from program owners, and aligning definitions and ownership.</dd></div>
+        <div><dt>How it works</dt><dd>I added pre-alignment checkpoints and consolidated nine tools into one experience.</dd></div>
+        <div class="impact"><dt>Impact</dt><dd><strong>The broader program's planning cycle moved from 12 to 10 weeks. That outcome was shared, and my contribution was part of it.</strong></dd></div>
+      </dl>
+    </article>
+
+    <article class="case has-visual" data-tracks="ai">
+      <div class="case-head"><span class="tag">Applied AI</span><h3>AI that speeds up reporting without replacing judgment</h3></div>
+      <figure class="visual"><img src="visuals/slides/10-practical-ai.png" alt="Applied AI: illustrative slide from the interview deck" loading="lazy"></figure>
+      <dl class="case-body">
+        <div><dt>Problem</dt><dd>Production narratives timed out because model calls ran while the user waited on the page.</dd></div>
+        <div><dt>What I owned</dt><dd>Generating first-draft trend summaries and AI-generated insights for leadership, and fixing the timeout.</dd></div>
+        <div><dt>How it works</dt><dd>Narrative generation now runs ahead of time, so users stop waiting on model calls, and each narrative is saved per data snapshot. A person checks every number and narrative before release.</dd></div>
+        <div class="impact"><dt>Impact</dt><dd><strong>Narratives are generated ahead of time, cached per snapshot, and reviewed before release.</strong></dd></div>
+      </dl>
+    </article>
+
+    <article class="case" data-tracks="tpm ai">
+      <div class="case-head"><span class="tag">Access and security</span><h3>Least privilege on the products I own</h3></div>
+      <dl class="case-body">
+        <div><dt>Problem</dt><dd>Sensitive reports needed enforced backend access, and stored access tokens were in use.</dd></div>
+        <div><dt>What I owned</dt><dd>Moving my products to access-package-only membership and enforcing backend access on sensitive reports.</dd></div>
+        <div><dt>How it works</dt><dd>I fixed dependency vulnerabilities flagged by scans, and replaced stored tokens with managed identity and role-based access. Privileged Identity Management grants elevated access only for a set time, after approval.</dd></div>
+        <div class="impact"><dt>Impact</dt><dd><strong>The products run without stored access tokens, and elevated access is time-limited.</strong></dd></div>
+      </dl>
+    </article>
+
+    <article class="case" data-tracks="tpm">
+      <div class="case-head"><span class="tag">Handoff</span><h3>Moving a tool from one owner to many</h3></div>
+      <dl class="case-body">
+        <div><dt>Problem</dt><dd>I was the only escalation point for a scorecard the team relied on.</dd></div>
+        <div><dt>What I owned</dt><dd>Planning the handoff before the retirement date.</dd></div>
+        <div><dt>How it works</dt><dd>I wrote a handover guide, ran office hours, recorded a walkthrough, and handed operations to 17 owners across program and pillar teams.</dd></div>
+        <div class="impact"><dt>Impact</dt><dd><strong>The team reports about 80% less routine maintenance, a result I contributed to.</strong></dd></div>
+      </dl>
+    </article>
+
+    <article class="case has-visual" data-tracks="tpm">
+      <div class="case-head"><span class="tag">Product and release</span><h3>Feature planning and release readiness at Jio</h3></div>
+      <figure class="visual"><img src="visuals/slides/11-jio-release.png" alt="Product and release: illustrative slide from the interview deck" loading="lazy"></figure>
+      <dl class="case-body">
+        <div><dt>Problem</dt><dd>Consumer shopping apps serving millions of users needed clear priorities and release criteria.</dd></div>
+        <div><dt>What I owned</dt><dd>Mobile feature planning and release criteria.</dd></div>
+        <div><dt>How it works</dt><dd>I used funnel analysis and A/B (split) testing to set priorities, and led validation and rollback checks across five commerce products.</dd></div>
+        <div class="impact"><dt>Impact</dt><dd><strong>The faster delivery option launched as a team outcome.</strong></dd></div>
+      </dl>
+    </article>
+  </section>
+
   <!-- SKILLS -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="grid three">
-      <article class="card">
-        <h3>Program and delivery</h3>
-        <ul class="chips">
-          <li>Technical program management</li><li>Cross-org alignment</li><li>Requirements engineering</li><li>KPI and OKR definition</li><li>Risk and dependency management</li><li>Executive communication</li><li>Agile and Kanban</li><li>Jira</li><li>Azure DevOps</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Data and analytics</h3>
-        <ul class="chips">
-          <li>KQL (query language for logs and telemetry)</li><li>SQL</li><li>Power BI and DAX (formula language)</li><li>Semantic models (business-level data layers)</li><li>Azure Synapse</li><li>Azure Data Factory</li><li>Azure Data Explorer</li><li>Dataverse (business data store)</li><li>ETL and ELT (data loading pipelines)</li><li>Data validation</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Engineering</h3>
-        <ul class="chips">
-          <li>Python</li><li>Flask</li><li>React</li><li>Azure Functions</li><li>REST and XMLA (data-access protocols)</li><li>Redis caching (fast temporary storage)</li><li>CI/CD</li><li>Bicep (infrastructure as code)</li><li>Entra ID (identity platform)</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>AI and forecasting</h3>
-        <ul class="chips">
-          <li>Agent skill design</li><li>MCP and SDK retrieval design (connections from AI tools to approved data)</li><li>LLM-assisted summaries</li><li>Prompt engineering</li><li>Azure OpenAI</li><li>Copilot Studio (exploratory)</li><li>ML forecasting integration</li><li>Human-in-the-loop review</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Security and governance</h3>
-        <ul class="chips">
-          <li>Access packages (approved access bundles)</li><li>Managed identity (sign-in without stored secrets)</li><li>Privileged Identity Management (time-limited admin access)</li><li>Threat modeling (finding attack paths early)</li><li>Privacy reviews</li><li>Secure-by-design standards</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Languages</h3>
-        <ul class="chips">
-          <li>English (full professional)</li><li>Hindi (native)</li><li>Marathi (limited working)</li><li>French (elementary)</li>
-        </ul>
-      </article>
+  <section id="skills" class="section alt">
+    <div class="heading">
+      <span class="label">Toolbox</span>
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-list">
+      <div class="skill-row">
+        <div class="skill-label"><i class='bx bx-group'></i><h3>Program and delivery</h3></div>
+        <ul class="chips"><li>Cross-team delivery</li><li>Stakeholder alignment</li><li>Requirements</li><li>Roadmap and milestone planning</li><li>Dependency and risk management</li><li>Key performance indicator (KPI) and objectives and key results (OKR) definition</li><li>Executive communication</li><li>Executive reporting</li><li>Cross-functional leadership</li><li>Agile delivery</li><li>Agile and Kanban</li><li>Jira</li><li>Azure DevOps</li></ul>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label"><i class='bx bxs-data'></i><h3>Data and analytics</h3></div>
+        <ul class="chips"><li>Python</li><li>Structured Query Language (SQL)</li><li>Kusto Query Language (KQL)</li><li>Data Analysis Expressions (DAX)</li><li>Power BI semantic models</li><li>Paginated reports</li><li>Data validation and modeling</li><li>Extract, transform, load (ETL) and extract, load, transform (ELT)</li><li>Data pipelines</li><li>Azure Data Explorer</li><li>Azure Synapse</li><li>Azure Data Factory</li><li>Azure Fabric</li><li>Dataverse</li></ul>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label"><i class='bx bx-server'></i><h3>Platforms and tools</h3></div>
+        <ul class="chips"><li>Azure Functions</li><li>Flask</li><li>React</li><li>Continuous integration and delivery (CI/CD) with Git and OneBranch</li><li>Bicep (infrastructure as code)</li><li>Microsoft Entra ID and Microsoft Authentication Library (MSAL)</li><li>Private networking</li><li>Federated credentials</li><li>Representational State Transfer (REST) and XML for Analysis (XMLA)</li><li>Git and GitHub Pages</li></ul>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label"><i class='bx bx-bot'></i><h3>AI and automation</h3></div>
+        <ul class="chips"><li>Microsoft Copilot</li><li>Copilot Studio (exploratory)</li><li>Model Context Protocol (MCP) and software development kit (SDK) retrieval</li><li>Large language model (LLM) summaries</li><li>Prompt engineering</li><li>Machine learning (ML) forecasting integration</li><li>AI operations (AIOps)</li><li>Azure OpenAI</li><li>Human-in-the-loop review</li><li>Claude Code</li><li>Claude application programming interface (API)</li><li>Agent skills authoring</li><li>MCP server setup</li><li>Permissions and hooks configuration</li></ul>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label"><i class='bx bxs-shield'></i><h3>Security and governance</h3></div>
+        <ul class="chips"><li>Access controls</li><li>Data classification</li><li>Managed identity</li><li>Privileged Identity Management</li><li>Access packages</li><li>Threat modeling</li><li>Privacy reviews</li><li>Secure-by-design standards</li><li>Pipeline security</li></ul>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label"><i class='bx bx-globe'></i><h3>Languages</h3></div>
+        <ul class="chips"><li>English (full professional)</li><li>Hindi (native)</li><li>Marathi (limited working)</li><li>French (elementary)</li></ul>
+      </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section alt">
-    <h2>Experience and education</h2>
-    <ol class="timeline">
-      <li><span class="when">Aug 2025 – Present</span><h3>Software Engineer, Microsoft</h3><p>Azure cloud reliability intelligence. I own the executive reliability scorecard, its pipelines and its access model.</p></li>
-      <li><span class="when">Oct 2024 – Aug 2025</span><h3>Technical Program Manager, Microsoft (Azure Cloud Reliability and Quality)</h3><p>Cross-org reporting strategy and delivery for Azure reliability, including the planning-tool consolidation and cross-team incident coordination.</p></li>
-      <li><span class="when">Feb 2024 – Oct 2024</span><h3>Technical Program Manager, Microsoft (Azure CXP PMO)</h3><p>Program management office reporting: Power BI models and dashboards for quarterly executive reviews, data freshness and security requirements.</p></li>
-      <li><span class="when">May 2023 – Aug 2023</span><h3>Technical Program Manager Intern, Microsoft</h3><p>Defined success metrics and a Power BI dashboard for a mission-critical customer-resiliency program. Received a full-time return offer.</p></li>
-      <li><span class="when">Oct 2022 – Aug 2023</span><h3>Student Business Analyst, University of Arizona IT Services</h3><p>Requirements and decision logs for a service-management application, and a phone migration across 20+ university units.</p></li>
-      <li><span class="when">Aug 2022 – Dec 2023</span><h3>M.S. Management Information Systems, University of Arizona (Eller College of Management)</h3><p>Business intelligence and analytics; information assurance. Graduate teaching assistant for data communications and strategic communication.</p></li>
-      <li><span class="when">Sep 2020 – Jun 2022</span><h3>Software Development Engineer / Product Manager, Jio Platforms (Reliance Industries)</h3><p>Owned mobile feature planning and release criteria for the JioMart Express launch, which gave shoppers a 2–3 hour grocery delivery option instead of 2–3 days. Assistant Manager (Jan–Dec 2021): led validation for five commerce products, coordinating defect reviews, end-to-end testing and rollback checks across a network of more than 100 colleagues.</p></li>
-      <li><span class="when">Jun 2019 – Jul 2019</span><h3>Engineer Intern, Siemens</h3><p>Designed 50+ data models for SCADA and PLCC operational data, and SQL queries to find anomalies in industrial monitoring datasets.</p></li>
-      <li><span class="when">Jun 2016 – Oct 2020</span><h3>B.E. Electronics and Telecommunications, University of Mumbai</h3></li>
-    </ol>
-    <div class="recognition">
-      <h3>Leadership and community</h3>
-      <p>Member of the Microsoft Aspire Leadership Council (2024–2026), where I plan and host sessions for early-career talent, mentor interns and new hires, and help interns move into full-time roles.</p>
-      <p>Rotaract Club of Mumbai (Jul 2017 – May 2021): Vice President in 2019–20, leading a team of 15 and mentoring 10 directors. Earlier, I served as Director of Community Services and Director of Professional Development (2018–19). I helped run Talent Fiesta and Challenging Challenges, disability inclusion programs, and X-pressions, which reached 4,000+ children.</p>
+  <!-- EXPERIENCE AND EDUCATION -->
+  <section id="experience" class="section">
+    <div class="heading">
+      <span class="label">Qualification</span>
+      <h2>Experience and education</h2>
+    </div>
+    <div class="qualification-container">
+      <div class="qual-col">
+        <h3 class="col-title"><i class='bx bxs-briefcase'></i> Experience</h3>
+        <ol class="timeline">
+          <li><img class="org-logo" src="images/logos/microsoft.svg" alt="Microsoft logo"><span class="when">Aug 2025 – Present</span><h4>Software Engineer, Microsoft</h4><p>Azure cloud reliability intelligence. I own the executive reliability scorecard, its pipelines and its access model.</p></li>
+          <li><img class="org-logo" src="images/logos/microsoft.svg" alt="Microsoft logo"><span class="when">Oct 2024 – Aug 2025</span><h4>Technical Program Manager, Microsoft (Azure Cloud Reliability and Quality)</h4><p>Cross-org reporting strategy and delivery for Azure reliability, including the planning-tool consolidation and cross-team incident coordination.</p></li>
+          <li><img class="org-logo" src="images/logos/microsoft.svg" alt="Microsoft logo"><span class="when">Feb 2024 – Oct 2024</span><h4>Technical Program Manager, Microsoft (Azure Customer Experience (CXP) Program Management Office (PMO))</h4><p>Program management office reporting: Power BI models and dashboards for quarterly executive reviews, data freshness and security requirements.</p></li>
+          <li><img class="org-logo" src="images/logos/microsoft.svg" alt="Microsoft logo"><span class="when">May 2023 – Aug 2023</span><h4>Technical Program Manager Intern, Microsoft</h4><p>Defined success metrics and a Power BI dashboard for a mission-critical customer-resiliency program. Received a full-time return offer.</p></li>
+          <li><img class="org-logo" src="images/logos/arizona.png" alt="University of Arizona logo"><span class="when">Oct 2022 – Aug 2023</span><h4>Student Business Analyst, University of Arizona Information Technology (IT) Services</h4><p>Requirements and decision logs for a service-management application, and a phone migration across 20+ university units.</p></li>
+          <li><img class="org-logo" src="images/logos/jio.png" alt="Jio logo"><span class="when">Sep 2020 – Jun 2022</span><h4>Software Development Engineer / Product Manager, Jio Platforms (Reliance Industries)</h4><p>Owned mobile feature planning and release criteria for the JioMart Express launch, which gave shoppers a 2–3 hour grocery delivery option instead of 2–3 days. Assistant Manager (Jan–Dec 2021): led validation for five commerce products, coordinating defect reviews, end-to-end testing and rollback checks across a network of more than 100 colleagues.</p></li>
+          <li><img class="org-logo" src="images/logos/siemens.png" alt="Siemens logo"><span class="when">Jun 2019 – Jul 2019</span><h4>Engineer Intern, Siemens</h4><p>Designed 50+ data models for supervisory control and data acquisition (SCADA) and power line carrier communication (PLCC) operational data, and SQL queries to find anomalies in industrial monitoring datasets.</p></li>
+        </ol>
+      </div>
+
+      <div class="qual-col">
+        <h3 class="col-title"><i class='bx bxs-graduation'></i> Education</h3>
+        <div class="edu-list">
+          <div class="edu-card">
+            <img class="org-logo" src="images/logos/arizona.png" alt="University of Arizona logo">
+            <dl>
+              <div><dt>Degree</dt><dd>M.S. (Master of Science)</dd></div>
+              <div><dt>Major</dt><dd>Management Information Systems</dd></div>
+              <div><dt>University</dt><dd>University of Arizona, Eller College of Management</dd></div>
+              <div><dt>Graduation Year</dt><dd>2023</dd></div>
+            </dl>
+          </div>
+          <div class="edu-card">
+            <img class="org-logo" src="images/logos/mumbai.png" alt="University of Mumbai coat of arms">
+            <dl>
+              <div><dt>Degree</dt><dd>B.E. (Bachelor of Engineering)</dd></div>
+              <div><dt>Major</dt><dd>Electronics and Telecommunications</dd></div>
+              <div><dt>University</dt><dd>University of Mumbai</dd></div>
+              <div><dt>Graduation Year</dt><dd>2020</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="leadership">
+      <h3 class="leadership-title">Leadership and community</h3>
+      <div class="leader-grid">
+        <article class="leader-card">
+          <span class="tag">Microsoft · 2024–2026</span>
+          <h4>Aspire Leadership Council</h4>
+          <ul>
+            <li>Plan and host sessions for early-career talent</li>
+            <li>Mentor interns and new hires</li>
+            <li>Help interns move into full-time roles</li>
+          </ul>
+        </article>
+        <article class="leader-card">
+          <span class="tag">Rotaract Club of Mumbai · Jul 2017 – May 2021</span>
+          <h4>Vice President, 2019–20</h4>
+          <ul>
+            <li>Led a team of 15 and mentored 10 directors</li>
+            <li>Director of Community Services and Director of Professional Development, 2018–19</li>
+            <li>Helped run Talent Fiesta, Challenging Challenges and X-pressions, which reached 4,000+ children</li>
+          </ul>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- PROJECTS, PUBLICATION, CERTIFICATIONS -->
-  <section id="projects" class="section">
-    <h2>Projects, publication and certifications</h2>
-    <p class="section-intro">Academic and personal projects from my graduate and undergraduate work, with my published research.</p>
+  <!-- PROJECTS AND PUBLICATION -->
+  <section id="projects" class="section alt">
+    <div class="heading">
+      <span class="label">Projects</span>
+      <h2>Projects and publication</h2>
+      <p class="section-intro">My published research, plus earlier academic work on request.</p>
+    </div>
 
     <div class="grid three">
-      <article class="card">
-        <span class="tag">Jan – Oct 2023 · Team lead</span>
-        <h3>Rotary District 5500 consulting engagement</h3>
-        <p>Led a 10-month consulting engagement for Rotary: a plan for clubs to partner with local businesses, built on stakeholder interviews with club presidents and business leaders.</p>
-      </article>
-      <article class="card">
-        <span class="tag">Oct – Dec 2022</span>
-        <h3>Restaurant customer churn prediction</h3>
-        <p>Engineered features from 900+ unstructured restaurant reviews, built neural network and KNN models to forecast churn, and visualized seasonal retention trends in R.</p>
-      </article>
-      <article class="card">
-        <span class="tag">Aug – Dec 2022 · Six-person team</span>
-        <h3>Football data management system</h3>
-        <p>Gathered requirements and designed a relational system for a football association's research and performance data, then built a full-stack .NET and Oracle application for retrieval and reporting.</p>
-      </article>
-      <article class="card">
-        <span class="tag">Aug 2022</span>
-        <h3>NYC 311 analysis for Tucson</h3>
-        <p>Analyzed NYC 311 service data in Excel and Tableau, and proposed a redesigned 311 architecture for Tucson, including non-emergency call types that could move off the 911 line.</p>
-      </article>
-      <article class="card">
-        <span class="tag">Aug – Oct 2019</span>
-        <h3>Telecom customer churn analysis</h3>
-        <p>Analyzed voice, SMS and internet usage across large telecom datasets, clustered customers for tailored retention offers, and predicted churn for high-value customers.</p>
-      </article>
-      <article class="card">
-        <span class="tag">Jan – Apr 2019</span>
-        <h3>Company database design</h3>
-        <p>Designed the data architecture for a company database, from E-R diagrams to a normalized relational schema, with SQL queries that also support NoSQL-style data.</p>
-      </article>
-      <article class="card">
+      <article class="card project">
         <span class="tag">Jul 2019 – Jun 2020 · Published May 2020</span>
         <h3>Smart and Secure Locker System</h3>
-        <p>Designed a smart locker with multi-factor authentication (FPGA and RFID) and IoT alerts. Published the research on SSRN (Elsevier): computer vision and a Raspberry Pi flag unauthorized users within 14 seconds and send image alerts for remote approval or denial.</p>
+        <p>Designed a smart locker with multi-factor authentication (field-programmable gate array (FPGA) and radio-frequency identification (RFID)) and Internet of Things (IoT) alerts. Published the research on the Social Science Research Network (SSRN, part of Elsevier): computer vision and a Raspberry Pi flag unauthorized users within 14 seconds and send image alerts for remote approval or denial.</p>
         <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3597444" target="_blank" rel="noopener">Read the publication on SSRN →</a></p>
       </article>
+        <article class="card project">
+          <span class="tag">Jan – Oct 2023 · Team lead</span>
+          <h3>Rotary District 5500 consulting engagement</h3>
+          <p>Led a 10-month consulting engagement for Rotary: a plan for clubs to partner with local businesses, built on stakeholder interviews with club presidents and business leaders.</p>
+        </article>
+        <article class="card project">
+          <span class="tag">Oct – Dec 2022</span>
+          <h3>Restaurant customer churn prediction</h3>
+          <p>Engineered features from 900+ unstructured restaurant reviews, built neural network and k-nearest neighbor (KNN) models to forecast churn, and visualized seasonal retention trends in R.</p>
+        </article>
     </div>
 
-    <h3 class="sub-heading">Certifications</h3>
-    <div class="grid three">
-      <article class="card">
-        <span class="tag">Microsoft · Sep 2024</span>
-        <h3><a href="https://www.linkedin.com/in/sanchitagarwala/details/certifications/" target="_blank" rel="noopener">Microsoft Global Hackathon 2024</a></h3>
-      </article>
-      <article class="card">
-        <span class="tag">Microsoft · Sep 2024</span>
-        <h3><a href="https://www.linkedin.com/in/sanchitagarwala/details/certifications/" target="_blank" rel="noopener">Introduction to Azure Data Factory</a></h3>
-      </article>
-      <article class="card">
-        <span class="tag">LinkedIn · Jul 2023</span>
-        <h3><a href="https://www.linkedin.com/in/sanchitagarwala/details/certifications/" target="_blank" rel="noopener">Master Dashboards and Data Viz in Power BI</a></h3>
-      </article>
-      <article class="card">
-        <span class="tag">Coursera · Mar 2021</span>
-        <h3><a href="https://www.linkedin.com/in/sanchitagarwala/details/certifications/" target="_blank" rel="noopener">Automatic Machine Learning with H2O AutoML and Python</a></h3>
-      </article>
-      <article class="card">
-        <span class="tag">DataCamp · Jun 2022</span>
-        <h3><a href="https://www.linkedin.com/in/sanchitagarwala/details/certifications/" target="_blank" rel="noopener">Intermediate SQL</a></h3>
-      </article>
-      <article class="card">
-        <span class="tag">University of Michigan · Nov 2020</span>
-        <h3><a href="https://www.linkedin.com/in/sanchitagarwala/details/certifications/" target="_blank" rel="noopener">Python for Everybody</a></h3>
-      </article>
+    <details class="academic">
+      <summary>View earlier academic work (2019–2023)</summary>
+      <div class="grid three">
+        <article class="card project">
+          <span class="tag">Aug – Dec 2022 · Six-person team</span>
+          <h3>Football data management system</h3>
+          <p>Gathered requirements and designed a relational system for a football association's research and performance data, then built a full-stack .NET and Oracle application for retrieval and reporting.</p>
+        </article>
+        <article class="card project">
+          <span class="tag">Aug 2022</span>
+          <h3>NYC 311 analysis for Tucson</h3>
+          <p>Analyzed NYC 311 service data in Excel and Tableau, and proposed a redesigned 311 architecture for Tucson, including non-emergency call types that could move off the 911 line.</p>
+        </article>
+        <article class="card project">
+          <span class="tag">Aug – Oct 2019</span>
+          <h3>Telecom customer churn analysis</h3>
+          <p>Analyzed voice, text message (SMS) and internet usage across large telecom datasets, clustered customers for tailored retention offers, and predicted churn for high-value customers.</p>
+        </article>
+        <article class="card project">
+          <span class="tag">Jan – Apr 2019</span>
+          <h3>Company database design</h3>
+          <p>Designed the data architecture for a company database, from entity-relationship (E-R) diagrams to a normalized relational schema, with SQL queries that also support non-relational (NoSQL) style data.</p>
+        </article>
+      </div>
+    </details>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certification" class="section">
+    <div class="heading">
+      <span class="label">My certifications</span>
+      <h2>Certifications</h2>
+      <p class="section-intro">Each card flips to show its validation link.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-flip">
+        <div class="cert-inner">
+          <div class="cert-front">
+            <i class='bx bxl-microsoft'></i>
+            <span class="tag">Microsoft · Sep 2024</span>
+            <h3>Microsoft Global Hackathon 2024</h3>
+            <span class="flip-hint">Hover or tap to flip</span>
+          </div>
+          <div class="cert-back">
+            <span class="tag">Validation</span>
+            <h3>Microsoft Global Hackathon 2024</h3>
+            <a class="btn small" href="https://www.credly.com/badges/b52de6a5-e776-42cb-9177-d7a1d6202e90/linked_in_profile" target="_blank" rel="noopener">View certificate</a>
+          </div>
+        </div>
+      </div>
+      <div class="cert-flip">
+        <div class="cert-inner">
+          <div class="cert-front">
+            <i class='bx bxl-microsoft'></i>
+            <span class="tag">Microsoft · Sep 2024</span>
+            <h3>Introduction to Azure Data Factory</h3>
+            <span class="flip-hint">Hover or tap to flip</span>
+          </div>
+          <div class="cert-back">
+            <span class="tag">Validation</span>
+            <h3>Introduction to Azure Data Factory</h3>
+            <a class="btn small" href="https://learn.microsoft.com/api/achievements/share/en-us/SanchitAgarwala-2104/WZX7SCDN?sharingId=C640DD72458B64AA" target="_blank" rel="noopener">View certificate</a>
+          </div>
+        </div>
+      </div>
+      <div class="cert-flip">
+        <div class="cert-inner">
+          <div class="cert-front">
+            <i class='bx bxl-linkedin-square'></i>
+            <span class="tag">LinkedIn · Jul 2023</span>
+            <h3>Master Dashboards and Data Viz in Power BI</h3>
+            <span class="flip-hint">Hover or tap to flip</span>
+          </div>
+          <div class="cert-back">
+            <span class="tag">Validation</span>
+            <h3>Master Dashboards and Data Viz in Power BI</h3>
+            <a class="btn small" href="https://www.linkedin.com/learning/certificates/8220ca92a4b15fffc278d9dfbc191f4ffc9cb221a13c96afbf3cbd0fc65d7c49" target="_blank" rel="noopener">View certificate</a>
+          </div>
+        </div>
+      </div>
+      <div class="cert-flip">
+        <div class="cert-inner">
+          <div class="cert-front">
+            <i class='bx bxl-coursera'></i>
+            <span class="tag">Coursera · Mar 2021</span>
+            <h3>Automatic Machine Learning with H2O AutoML and Python</h3>
+            <span class="flip-hint">Hover or tap to flip</span>
+          </div>
+          <div class="cert-back">
+            <span class="tag">Validation</span>
+            <h3>Automatic Machine Learning with H2O AutoML and Python</h3>
+            <a class="btn small" href="https://www.coursera.org/account/accomplishments/verify/BLFE56BTWJ9J" target="_blank" rel="noopener">View certificate</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="section contact">
-    <h2>Let's talk</h2>
+    <div class="heading">
+      <span class="label">Connect to me</span>
+      <h2>Let's talk</h2>
+    </div>
     <p>The fastest way to reach me is LinkedIn. I'm happy to talk about technical program management, reliability reporting, data platforms or applied AI.</p>
     <div class="cta-row">
       <a class="btn primary" href="https://www.linkedin.com/in/sanchitagarwala" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="mailto:sanchit.agarwala@gmail.com?subject=Hello%20from%20your%20portfolio">Email me</a>
-      <a class="btn" href="resume.pdf" download>Download resume</a>
+      <button class="btn" type="button" id="copy-email" data-email="sanchit.agarwala@gmail.com">Copy email</button>
+      <a class="btn" href="Sanchit_Agarwala_resume.pdf" download>Download resume</a>
     </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
+  <div class="footer-social">
+    <a href="https://www.linkedin.com/in/sanchitagarwala" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+    <a href="mailto:sanchit.agarwala@gmail.com" aria-label="Email"><i class='bx bxl-gmail'></i></a>
+    <a href="Sanchit_Agarwala_resume.pdf" download aria-label="Download resume"><i class='bx bxs-file-pdf'></i></a>
+  </div>
   <p>Examples are generalized. Figures are self-reported from my own records and internal reviews. Nothing here is confidential employer information.</p>
-  <p>© 2026 Sanchit Agarwala</p>
+  <p class="copyright">© 2026 Sanchit Agarwala</p>
 </footer>
 
 <script src="script.js"></script>
