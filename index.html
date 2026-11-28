@@ -118,7 +118,7 @@
       <p class="section-intro">I author reusable Copilot skills: structured, reviewable workflows that gather context, use approved tools and data, do the arithmetic in code and leave the final call to a person.</p>
     </div>
 
-    <div class="coverflow" data-cf data-height="560" data-autoplay aria-roledescription="carousel" aria-label="Agentic work">
+    <div class="coverflow" data-cf data-height="640" data-autoplay aria-roledescription="carousel" aria-label="Agentic work">
       <article class="card agentic">
         <span class="tag">Evidence-grounded reporting</span>
         <h3>A reliability check-in skill with human review</h3>
@@ -136,6 +136,54 @@
         <h3>Copilot-assisted recurring work</h3>
         <figure class="mini-flow"><img src="visuals/agentic/copilot-recurring-work.svg" alt="Flow: recurring work, Copilot first pass, owner check" loading="lazy"></figure>
         <p>I introduced Copilot-assisted workflows for code review, data analysis and document drafting, cutting manual preparation in recurring work. Owners check the output before they use it. I also explored Copilot Studio for agent use cases.</p>
+      </article>
+      <article class="card agentic">
+        <span class="tag">Connected workflow</span>
+        <h3>A program reliability loop: four agent stages, one approval path</h3>
+        <div class="loop-map" data-loop aria-label="Program reliability loop stages. Select a stage to see its flow.">
+          <button type="button" class="loop-block" data-i="0" aria-controls="loop-pop-0" aria-expanded="false">
+            <span class="loop-num" aria-hidden="true">1</span>
+            <span><strong>Detect</strong><span class="loop-sub">Metric triage and dependency signals</span></span>
+          </button>
+          <button type="button" class="loop-block" data-i="1" aria-controls="loop-pop-1" aria-expanded="false">
+            <span class="loop-num" aria-hidden="true">2</span>
+            <span><strong>Record</strong><span class="loop-sub">Decisions and risks logged, owner approves</span></span>
+          </button>
+          <button type="button" class="loop-block" data-i="2" aria-controls="loop-pop-2" aria-expanded="false">
+            <span class="loop-num" aria-hidden="true">3</span>
+            <span><strong>Draft and verify</strong><span class="loop-sub">Status drafted, second agent checks claims</span></span>
+          </button>
+          <button type="button" class="loop-block last" data-i="3" aria-controls="loop-pop-3" aria-expanded="false">
+            <span class="loop-num" aria-hidden="true">4</span>
+            <span><strong>Gate</strong><span class="loop-sub">Release evidence checked, human signs off</span></span>
+          </button>
+
+          <div class="loop-pop" id="loop-pop-0" role="dialog" aria-labelledby="loop-pop-0-h" hidden>
+            <div class="loop-pop-head"><h4 id="loop-pop-0-h" tabindex="-1">Stage 1: Detect</h4></div>
+            <img src="visuals/agentic/loop-triage.svg" alt="Flow: check the signals, rank hypotheses, human review">
+            <p>Checks data freshness, row counts and recent definition changes, ranks causes by evidence, then an analyst reviews them.</p>
+            <div class="loop-pop-actions"><button type="button" class="loop-pop-next">Next: Record</button><button type="button" class="loop-pop-close">Close</button></div>
+          </div>
+          <div class="loop-pop" id="loop-pop-1" role="dialog" aria-labelledby="loop-pop-1-h" hidden>
+            <div class="loop-pop-head"><h4 id="loop-pop-1-h" tabindex="-1">Stage 2: Record</h4></div>
+            <img src="visuals/agentic/loop-capture.svg" alt="Flow: read the record, flag decisions and risks, owner approves">
+            <p>Reads meeting notes and the RAID export within scope, links new decisions that conflict with old ones, and waits for an owner to approve.</p>
+            <div class="loop-pop-actions"><button type="button" class="loop-pop-next">Next: Draft and verify</button><button type="button" class="loop-pop-close">Close</button></div>
+          </div>
+          <div class="loop-pop" id="loop-pop-2" role="dialog" aria-labelledby="loop-pop-2-h" hidden>
+            <div class="loop-pop-head"><h4 id="loop-pop-2-h" tabindex="-1">Stage 3: Draft and verify</h4></div>
+            <img src="visuals/agentic/loop-verify.svg" alt="Flow: draft the update, independent checker checks each claim, send or revise">
+            <p>One agent drafts the update with a citation for each claim. A separate checker tests every claim against the source, not the draft.</p>
+            <div class="loop-pop-actions"><button type="button" class="loop-pop-next">Next: Gate</button><button type="button" class="loop-pop-close">Close</button></div>
+          </div>
+          <div class="loop-pop" id="loop-pop-3" role="dialog" aria-labelledby="loop-pop-3-h" hidden>
+            <div class="loop-pop-head"><h4 id="loop-pop-3-h" tabindex="-1">Stage 4: Gate</h4></div>
+            <img src="visuals/agentic/loop-gate.svg" alt="Flow: check the evidence, list what is missing, owner signs off">
+            <p>Checks the release against an evidence checklist and lists gaps with an owner and due date. A named owner signs off.</p>
+            <div class="loop-pop-actions"><button type="button" class="loop-pop-close">Close</button></div>
+          </div>
+        </div>
+        <p>A design prototype on synthetic program data, not a production system. Select each stage to see its flow.</p>
       </article>
     </div>
 

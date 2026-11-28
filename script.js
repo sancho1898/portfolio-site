@@ -149,7 +149,7 @@
 
 // Click (or press Enter on) any diagram or photo to view it enlarged.
 (function () {
-  const SELECTOR = '.visual img, .project-flow img, .mini-flow img, .about-photo';
+  const SELECTOR = '.visual img, .project-flow img, .mini-flow img, .about-photo, .loop-pop img';
   const dlg = document.createElement('dialog');
   dlg.className = 'lightbox';
   dlg.setAttribute('aria-label', 'Enlarged image');
@@ -573,4 +573,41 @@
   toggle.querySelectorAll('button').forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
   wide.addEventListener('change', () => setView(wide.matches ? 'path' : 'list'));
   setView('path');
+})();
+
+// Agentic overview: select a stage block to see its flow over the overview, step through with Next, Esc or Close to return.
+(function () {
+  const map = document.querySelector('[data-loop]');
+  if (!map) return;
+  const blocks = [...map.querySelectorAll('.loop-block')];
+  const pops = [...map.querySelectorAll('.loop-pop')];
+  let current = null;
+
+  function show(i) {
+    if (current !== null) pops[current].hidden = true;
+    blocks.forEach((b, j) => b.setAttribute('aria-expanded', String(j === i)));
+    pops[i].hidden = false;
+    current = i;
+    pops[i].querySelector('h4').focus();
+  }
+  function close() {
+    if (current === null) return;
+    const i = current;
+    pops[i].hidden = true;
+    blocks[i].setAttribute('aria-expanded', 'false');
+    current = null;
+    blocks[i].focus();
+  }
+
+  blocks.forEach((b, i) => b.addEventListener('click', () => (current === i ? close() : show(i))));
+  pops.forEach((p, i) => {
+    p.querySelector('.loop-pop-close').addEventListener('click', close);
+    const next = p.querySelector('.loop-pop-next');
+    if (next) next.addEventListener('click', () => show(i + 1));
+    // Keep arrow keys and Escape inside the popup: they should not move the carousel.
+    p.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); close(); }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') e.stopPropagation();
+    });
+  });
 })();

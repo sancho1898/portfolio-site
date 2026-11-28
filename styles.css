@@ -631,5 +631,46 @@ dialog.lightbox img.is-vector { width: min(94vw, 1100px); height: auto; padding:
   background: var(--ink); color: #ffffff; font-weight: 700; text-decoration: none;
 }
 .skip-link:focus { top: 12px; outline: 3px solid var(--accent); outline-offset: 2px; }
-button.btn { background: transparent; }
+button.btn { background: transparent; font: inherit; font-weight: 600; }
 main:focus { outline: none; }
+
+/* ---------- Agentic: clickable reliability loop overview ---------- */
+.loop-map { position: relative; display: grid; gap: 14px; margin: 4px 0 6px; }
+.loop-block {
+  position: relative; display: flex; gap: 12px; align-items: center; width: 100%; text-align: left;
+  padding: 12px 14px; background: #ffffff; border: 1px solid var(--line); border-radius: 10px;
+  font: inherit; color: var(--ink); cursor: pointer;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.loop-block:hover, .loop-block[aria-expanded="true"] { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 12%, transparent); }
+.loop-block.last { background: #e8f3f2; border-color: var(--accent); }
+.loop-block:focus-visible, .loop-pop button:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 50%, transparent); outline-offset: 2px; }
+.loop-block:not(.last)::after {
+  content: ""; position: absolute; left: 24px; bottom: -14px; width: 2px; height: 14px; background: var(--accent);
+}
+.loop-num {
+  flex: 0 0 28px; height: 28px; border-radius: 50%; background: var(--accent); color: var(--accent-ink);
+  display: grid; place-items: center; font-weight: 700; font-size: 0.85rem;
+}
+.loop-block strong { display: block; font-size: 0.95rem; }
+.loop-sub { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 2px; line-height: 1.4; }
+
+.loop-pop {
+  position: absolute; inset: 0; z-index: 5; overflow-y: auto; box-sizing: border-box;
+  display: flex; flex-direction: column; gap: 12px; padding: 16px;
+  background: #ffffff; border: 1px solid var(--accent); border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(35, 49, 63, 0.14);
+}
+.loop-pop[hidden] { display: none; }
+.loop-pop h4 { margin: 0; font-size: 1rem; color: var(--ink); }
+.loop-pop h4:focus { outline: none; }
+.loop-pop img { display: block; width: 100%; height: auto; }
+.loop-pop p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+.loop-pop-actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; margin-top: auto; }
+.loop-pop button {
+  font: inherit; font-size: 0.88rem; font-weight: 600; cursor: pointer;
+  padding: 7px 14px; border-radius: 999px; border: 1px solid var(--accent); background: transparent; color: var(--accent);
+}
+.loop-pop button:hover { background: var(--accent); color: var(--accent-ink); }
+.loop-pop .loop-pop-next { background: var(--accent); color: var(--accent-ink); }
+.loop-pop .loop-pop-next:hover { opacity: 0.9; }
