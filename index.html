@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- Left social rail (wide screens only) -->
 <aside class="social-rail" aria-label="Social links">
@@ -41,7 +42,7 @@
   </nav>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 
   <!-- HOME -->
   <section class="home section" id="home">
@@ -69,8 +70,8 @@
         <img class="about-photo" src="images/headshot.jpg" alt="Sanchit Agarwala">
       </div>
       <div class="about-text">
-        <h3 class="about-sub">Program and Data Leadership</h3>
-        <p>At Microsoft, I define the metrics for Azure cloud reliability, align partner teams on them, and build the reporting leaders use. Before that, at Jio Platforms, I led feature planning and release validation for commerce apps used by millions.</p>
+        <h3 class="about-sub">Program, Product and Data Leadership</h3>
+        <p>I have nearly 5 years of experience across program management, engineering and product, including internships. At Microsoft, I define the metrics for Azure cloud reliability, align partner teams on them, and build the reporting leaders use. Before that, at Jio Platforms, I led feature planning and release validation for consumer commerce apps.</p>
         <p>My core depth is Azure data platforms, reliability reporting and cross-org program execution, with hands-on SQL, KQL and Power BI work.</p>
       </div>
     </div>
@@ -117,21 +118,23 @@
       <p class="section-intro">I author reusable Copilot skills: structured, reviewable workflows that gather context, use approved tools and data, do the arithmetic in code and leave the final call to a person.</p>
     </div>
 
-    <div class="case">
-      <div class="case-head"><span class="tag">Evidence-grounded reporting</span><h3>A reliability check-in skill with human review</h3></div>
-      <p>I designed a reliability check-in skill for monthly reviews. It gathers context first, retrieves data through approved connection paths (the Model Context Protocol (MCP) and software development kits (SDKs), the standard ways for AI tools to reach data), calculates metric comparisons in code, and drafts a narrative where every claim links to its source. A reviewer approves each draft before use.</p>
-      <figure class="visual"><img src="visuals/agent-skill-flow.svg" alt="Flow of the check-in skill: context intake, approved retrieval, deterministic math, source-linked draft, human review" loading="lazy"><figcaption>Conceptual flow of the check-in skill. This is a diagram, not a screenshot.</figcaption></figure>
-    </div>
-
-    <div class="grid two">
-      <article class="card">
+    <div class="coverflow" data-cf data-height="560" data-autoplay aria-roledescription="carousel" aria-label="Agentic work">
+      <article class="card agentic">
+        <span class="tag">Evidence-grounded reporting</span>
+        <h3>A reliability check-in skill with human review</h3>
+        <figure class="visual"><img src="visuals/agent-skill-flow.svg" alt="Flow of the check-in skill: context intake, approved retrieval, deterministic math, source-linked draft, human review" loading="lazy"><figcaption>Conceptual flow of the check-in skill. This is a diagram, not a screenshot.</figcaption></figure>
+        <p>I designed a reliability check-in skill for monthly reviews. It gathers context first, retrieves data through approved connection paths (the Model Context Protocol (MCP) and software development kits (SDKs), the standard ways for AI tools to reach data), calculates metric comparisons in code, and drafts a narrative where every claim links to its source. A reviewer approves each draft before use.</p>
+      </article>
+      <article class="card agentic">
         <span class="tag">Investigation workflows</span>
         <h3>Environment-aware investigation workflows</h3>
-        <p>I developed workflows with environment-aware, scoped evidence retrieval for investigations.</p>
+        <figure class="mini-flow"><img src="visuals/agentic/investigation-workflow.svg" alt="Flow: select environment, scoped evidence, reviewed findings" loading="lazy"></figure>
+        <p>I developed log-investigation workflows that collect evidence from the selected environment using scoped queries and Python scripts with defined limits.</p>
       </article>
-      <article class="card">
+      <article class="card agentic">
         <span class="tag">Team practice</span>
         <h3>Copilot-assisted recurring work</h3>
+        <figure class="mini-flow"><img src="visuals/agentic/copilot-recurring-work.svg" alt="Flow: recurring work, Copilot first pass, owner check" loading="lazy"></figure>
         <p>I introduced Copilot-assisted workflows for code review, data analysis and document drafting, cutting manual preparation in recurring work. Owners check the output before they use it. I also explored Copilot Studio for agent use cases.</p>
       </article>
     </div>
@@ -154,22 +157,24 @@
       <button class="filter" type="button" data-filter="data">Data &amp; Analytics (5)</button>
       <button class="filter" type="button" data-filter="ai">Applied AI &amp; Data Platforms (4)</button>
       <button class="filter" type="button" data-filter="pm">Product Management (4)</button>
+      <button class="filter" type="button" data-filter="consult">Consulting &amp; Business Analysis (2)</button>
     </div>
+    <p class="filter-note" id="filter-note" hidden></p>
 
     <p class="catalog-hint">The carousel loops and rotates on its own. Swipe or use the arrows, or pause it.</p>
     <div class="coverflow" data-cf data-height="640" data-autoplay aria-roledescription="carousel" aria-label="Professional work">
-    <article class="case has-visual" data-tracks="data tpm">
+    <article class="case has-visual" data-tracks="data tpm consult">
       <div class="case-head"><span class="tag">Executive reporting</span><h3>A monthly reliability scorecard that leadership trusts</h3></div>
       <figure class="visual"><img src="visuals/slides/04-executive-scorecard.png" alt="Executive reporting: illustrative slide from the interview deck" loading="lazy"></figure>
       <dl class="case-body">
         <div><dt>Problem</dt><dd>Monthly review prep took about a day, and leadership needed every KPI to have a clear definition.</dd></div>
-        <div><dt>What I owned</dt><dd>The executive reliability scorecard: 12+ key performance indicators (KPIs) used in senior leadership reviews. I aligned six or more partner teams on definitions, validation and targets, and maintained the pipelines and models behind it.</dd></div>
+        <div><dt>What I owned</dt><dd>The executive reliability scorecard: 12+ key performance indicators (KPIs) for senior leadership, which I present in leadership-team (LT) reviews. I aligned six or more partner teams on definitions, validation and targets, and maintained the pipelines and models behind it.</dd></div>
         <div><dt>How it works</dt><dd>Every KPI has a named definition and an owner. A generated first draft is produced, and a person validates it before review.</dd></div>
         <div class="impact"><dt>Impact</dt><dd><strong>Monthly review prep dropped from about a day to 1–2 hours.</strong></dd></div>
       </dl>
     </article>
 
-    <article class="case has-visual" data-tracks="data ai">
+    <article class="case has-visual" data-tracks="data ai consult">
       <div class="case-head"><span class="tag">Metric definitions</span><h3>One definition, many stakeholders</h3></div>
       <figure class="visual"><img src="visuals/slides/05-metric-contract.png" alt="Metric definitions: illustrative slide from the interview deck" loading="lazy"></figure>
       <dl class="case-body">
@@ -185,7 +190,7 @@
       <figure class="visual"><img src="visuals/slides/06-operational-health.png" alt="Operational health: illustrative slide from the interview deck" loading="lazy"></figure>
       <dl class="case-body">
         <div><dt>Problem</dt><dd>Four organizations needed one reliability health view across roughly 25–30 Azure services.</dd></div>
-        <div><dt>What I owned</dt><dd>Building and launching the operational health reporting.</dd></div>
+        <div><dt>What I owned</dt><dd>Building and launching the client-facing operational health reporting.</dd></div>
         <div><dt>How it works</dt><dd>Users start with a heatmap, move to a snapshot or comparison, then drill into the definition behind each KPI.</dd></div>
         <div class="impact"><dt>Impact</dt><dd><strong>Launched across 25–30 Azure services, used by four organizations across eight service groups.</strong></dd></div>
       </dl>
@@ -203,24 +208,24 @@
     </article>
 
     <article class="case has-visual" data-tracks="tpm data ai pm">
-      <div class="case-head"><span class="tag">Platform decision</span><h3>Moving reporting to a unified web platform</h3></div>
+      <div class="case-head"><span class="tag">Platform decision</span><h3>Piloting direct queries to Power BI semantic models</h3></div>
       <figure class="visual"><img src="visuals/slides/08-xmla-pilot.png" alt="Platform decision: illustrative slide from the interview deck" loading="lazy"></figure>
       <dl class="case-body">
         <div><dt>Problem</dt><dd>A reliability scorecard ran in Power BI and needed to move to a unified web platform.</dd></div>
         <div><dt>What I owned</dt><dd>The reporting-side work, and helping set up the infrastructure with the platform team.</dd></div>
-        <div><dt>How it works</dt><dd>Delivered as a web platform. The XMLA migration connects the platform to the underlying data models. Rollout was phased: users onboarded in stages, one process wrote data while a shared cache served results, each dataset was checked for completeness before publishing, and alerts were set up.</dd></div>
-        <div class="impact"><dt>Impact</dt><dd><strong>Cleared user interface (UI), technical leadership, privacy and threat-model reviews before go-live.</strong></dd></div>
+        <div><dt>How it works</dt><dd>Piloted XMLA queries against Power BI semantic models, with data-parity checks, rollback guidance and an owner migration checklist.</dd></div>
+        <div class="impact"><dt>Impact</dt><dd><strong>A tested pilot path, with parity checks and rollback in place before any wider rollout.</strong></dd></div>
       </dl>
     </article>
 
     <article class="case has-visual" data-tracks="tpm pm">
       <div class="case-head"><span class="tag">Cross-team planning</span><h3>Nine planning tools, one shared vocabulary</h3></div>
-      <figure class="visual"><img src="visuals/slides/09-cross-team-planning.png" alt="Cross-team planning: illustrative slide from the interview deck" loading="lazy"></figure>
+      <figure class="visual"><img src="visuals/planning-alignment-flow.svg" alt="Planning alignment: nine planning tools, program-owner requirements, common field definitions, one shared vocabulary" loading="lazy"></figure>
       <dl class="case-body">
         <div><dt>Problem</dt><dd>Planning data was split across fragmented tools with unclear field definitions.</dd></div>
         <div><dt>What I owned</dt><dd>Gathering requirements from program owners, and aligning definitions and ownership.</dd></div>
-        <div><dt>How it works</dt><dd>I added pre-alignment checkpoints and consolidated nine tools into one experience.</dd></div>
-        <div class="impact"><dt>Impact</dt><dd><strong>Helped reduce the broader program's planning cycle from 12 to 10 weeks.</strong></dd></div>
+        <div><dt>How it works</dt><dd>I added pre-alignment checkpoints, and aligned program owners on requirements and common field definitions across nine planning tools as planning moved from 12-week to 10-week cycles, then to continuous planning.</dd></div>
+        <div class="impact"><dt>Impact</dt><dd><strong>One shared vocabulary for planning data across nine tools.</strong></dd></div>
       </dl>
     </article>
 
@@ -253,7 +258,7 @@
         <div><dt>Problem</dt><dd>I was the only escalation point for a scorecard the team relied on.</dd></div>
         <div><dt>What I owned</dt><dd>Planning the handoff before the retirement date.</dd></div>
         <div><dt>How it works</dt><dd>I wrote a handover guide, ran office hours, recorded a walkthrough, and handed operations to 17 owners across program and pillar teams.</dd></div>
-        <div class="impact"><dt>Impact</dt><dd><strong>The team reports about 80% less routine maintenance, a result I contributed to.</strong></dd></div>
+        <div class="impact"><dt>Impact</dt><dd><strong>Operations moved from one escalation point to 17 owners across program and pillar teams.</strong></dd></div>
       </dl>
     </article>
 
@@ -261,9 +266,9 @@
       <div class="case-head"><span class="tag">Product and release</span><h3>Feature planning and release readiness at Jio</h3></div>
       <figure class="visual"><img src="visuals/slides/11-jio-release.png" alt="Product and release: illustrative slide from the interview deck" loading="lazy"></figure>
       <dl class="case-body">
-        <div><dt>Problem</dt><dd>Consumer shopping apps serving millions of users needed clear priorities and release criteria.</dd></div>
-        <div><dt>What I owned</dt><dd>Mobile feature planning and release criteria.</dd></div>
-        <div><dt>How it works</dt><dd>I used funnel analysis and A/B (split) testing to set priorities, and led validation and rollback checks across five commerce products.</dd></div>
+        <div><dt>Problem</dt><dd>Consumer shopping apps needed clear priorities and release criteria.</dd></div>
+        <div><dt>What I owned</dt><dd>Mobile feature planning and release criteria for the JioMart Express launch (2-3 hour delivery instead of 2-3 days).</dd></div>
+        <div><dt>How it works</dt><dd>I used funnel analysis, A/B tests and statistical analysis to set priorities, led validation across five commerce products, and at times led and motivated Jio product and technology teams on the new commerce app.</dd></div>
         <div class="impact"><dt>Impact</dt><dd><strong>Helped bring a 2–3 hour express delivery option to shoppers, down from 2–3 days.</strong></dd></div>
       </dl>
     </article>
@@ -279,11 +284,11 @@
     <div class="skills-list">
       <div class="skill-row">
         <div class="skill-label"><i class='bx bx-group'></i><h3>Program and Delivery</h3></div>
-        <ul class="chips"><li>Cross-team delivery</li><li>Stakeholder alignment</li><li>Requirements</li><li>Roadmap and milestone planning</li><li>Dependency and risk management</li><li>Key performance indicator (KPI) and objectives and key results (OKR) definition</li><li>Executive communication</li><li>Executive reporting</li><li>Cross-functional leadership</li><li>Agile delivery</li><li>Agile and Kanban</li><li>Jira</li><li>Azure DevOps</li></ul>
+        <ul class="chips"><li>Cross-team delivery</li><li>Stakeholder alignment</li><li>Requirements</li><li>Roadmap and milestone planning</li><li>Dependency and risk management</li><li>Key performance indicator (KPI) and objectives and key results (OKR) definition</li><li>Executive communication</li><li>Executive reporting</li><li>Microsoft PowerPoint and Excel (leadership-team presentations)</li><li>Time management</li><li>Cross-functional leadership</li><li>Agile delivery</li><li>Agile and Kanban</li><li>Jira</li><li>Azure DevOps</li></ul>
       </div>
       <div class="skill-row">
         <div class="skill-label"><i class='bx bxs-data'></i><h3>Data and Analytics</h3></div>
-        <ul class="chips"><li>Python</li><li>Structured Query Language (SQL)</li><li>Kusto Query Language (KQL)</li><li>Data Analysis Expressions (DAX)</li><li>Power BI semantic models</li><li>Paginated reports</li><li>Data validation and modeling</li><li>Extract, transform, load (ETL) and extract, load, transform (ELT)</li><li>Data pipelines</li><li>Azure Data Explorer</li><li>Azure Synapse</li><li>Azure Data Factory</li><li>Azure Fabric</li><li>Dataverse</li></ul>
+        <ul class="chips"><li>Python</li><li>R</li><li>Structured Query Language (SQL)</li><li>Kusto Query Language (KQL)</li><li>Data Analysis Expressions (DAX)</li><li>Power BI semantic models</li><li>Paginated reports</li><li>Data validation and modeling</li><li>Statistical analysis</li><li>Data mining</li><li>Extract, transform, load (ETL) and extract, load, transform (ELT)</li><li>Data pipelines</li><li>Azure Data Explorer</li><li>Azure Synapse</li><li>Azure Data Factory</li><li>Azure Fabric</li><li>Dataverse</li></ul>
       </div>
       <div class="skill-row">
         <div class="skill-label"><i class='bx bx-server'></i><h3>Platforms and Tools</h3></div>
@@ -291,7 +296,7 @@
       </div>
       <div class="skill-row">
         <div class="skill-label"><i class='bx bx-bot'></i><h3>AI and Automation</h3></div>
-        <ul class="chips"><li>Microsoft Copilot</li><li>Copilot Studio (exploratory)</li><li>Model Context Protocol (MCP) and software development kit (SDK) retrieval</li><li>Large language model (LLM) summaries</li><li>Prompt engineering</li><li>Machine learning (ML) forecasting integration</li><li>AI operations (AIOps)</li><li>Azure OpenAI</li><li>Human-in-the-loop review</li><li>Claude Code</li><li>Claude application programming interface (API)</li><li>Agent skills authoring</li><li>MCP server setup</li><li>Permissions and hooks configuration</li></ul>
+        <ul class="chips"><li>Microsoft Copilot</li><li>Copilot Studio (exploratory)</li><li>Model Context Protocol (MCP) and software development kit (SDK) retrieval</li><li>Large language model (LLM) summaries</li><li>Prompt engineering</li><li>Machine learning (ML) forecasting integration</li><li>AI operations (AIOps)</li><li>Azure OpenAI</li><li>Human-in-the-loop review</li><li>Claude Code</li><li>Claude application programming interface (API)</li><li>Agent skills authoring</li><li>Permissions and hooks configuration</li></ul>
       </div>
       <div class="skill-row">
         <div class="skill-label"><i class='bx bxs-shield'></i><h3>Security and Governance</h3></div>
@@ -310,40 +315,46 @@
       <span class="label">Qualification</span>
       <h2>Experience and Education</h2>
     </div>
+    <div class="view-toggle" role="group" aria-label="Choose how to view experience and education">
+      <button type="button" data-view="path" aria-pressed="true">Career path</button>
+      <button type="button" data-view="list" aria-pressed="false">List</button>
+    </div>
+    <div class="career-path" id="career-path" hidden></div>
     <div class="qualification-container">
       <div class="qual-col">
         <h3 class="col-title"><i class='bx bxs-briefcase'></i> Experience</h3>
         <ol class="timeline">
-          <li><img class="org-logo" src="images/logos/microsoft.svg" alt="Microsoft logo"><details class="job"><summary><span class="when">Aug 2025 – Present</span><h4>Software Engineer, Microsoft</h4><span class="job-line">Owns the executive reliability scorecard and the reporting platform behind it for Azure cloud reliability.</span></summary><div class="job-body"><ul class="job-points"><li>Own the monthly executive reliability scorecard (12+ KPIs) for CVP and senior leadership; align 6+ teams on metric definitions, data validation and semi-annual targets.</li><li>Reduced first-draft preparation time for monthly leadership summaries from about a day to 1-2 hours using scorecard data.</li><li>Built and launched reporting for 25-30 Azure services, enabling four organizations to review site reliability engineering work and compare progress across eight service groups.</li><li>Own end-to-end development of a centralized reliability intelligence web platform (Python/Flask, migrating to React) that serves 100+ stakeholders, including CVP-level and senior leadership.</li><li>Implement LLM-assisted workflows (Microsoft Copilot, prompt engineering) for AI-generated summaries, outage narratives and natural-language querying of operational data.</li></ul></div></details></li>
-          <li><img class="org-logo" src="images/logos/microsoft.svg" alt="Microsoft logo"><details class="job"><summary><span class="when">Oct 2024 – Aug 2025</span><h4>Technical Program Manager, Microsoft (Azure Cloud Reliability and Quality)</h4><span class="job-line">Led reporting strategy and cross-team delivery for Azure reliability, including planning-tool consolidation and incident coordination.</span></summary><div class="job-body"><ul class="job-points"><li>Aligned program owners on requirements and common field definitions across nine planning tools as planning shifted from 12-week to 10-week cycles, then to continuous planning.</li><li>Defined, instrumented and tracked 12+ KPIs spanning incident quality, change management compliance, service reliability and security posture.</li><li>Resolved 20+ cross-team escalations (ICMs) through structured triage, root-cause analysis and stakeholder alignment, including broken ingestion pipelines.</li><li>Owned executive communication: prepared and delivered bi-weekly readouts to Senior Directors and CVPs, translating complex data into strategic recommendations.</li><li>Introduced Copilot-assisted workflows for code reviews, data analysis and document drafting.</li></ul></div></details></li>
-          <li><img class="org-logo" src="images/logos/microsoft.svg" alt="Microsoft logo"><details class="job"><summary><span class="when">Feb 2024 – Oct 2024</span><h4>Technical Program Manager, Microsoft (Azure Customer Experience (CXP) Program Management Office (PMO))</h4><span class="job-line">Built Power BI reporting and dashboards for quarterly executive reviews and program health.</span></summary><div class="job-body"><ul class="job-points"><li>Delivered Power BI reporting infrastructure (DAX semantic models, paginated reports and interactive dashboards) for program health, resource allocation and milestone tracking.</li><li>Maintained a portfolio of 30+ dashboards for leadership visibility into program outcomes.</li><li>Partnered with 5+ program owners to understand business requirements, define success metrics and drive data-driven insights for strategic planning.</li><li>Ensured Unified Data Platform compliance with SFI standards, including data classification, access controls and pipeline security hardening.</li><li>Designed and maintained Dataverse-backed data models supporting Power Platform workflows and automated reporting for the PMO.</li></ul></div></details></li>
-          <li><img class="org-logo" src="images/logos/microsoft.svg" alt="Microsoft logo"><details class="job"><summary><span class="when">May 2023 – Aug 2023</span><h4>Technical Program Manager Intern, Microsoft</h4><span class="job-line">Defined success metrics and a Power BI dashboard for a mission-critical program; received a full-time return offer.</span></summary><div class="job-body"><ul class="job-points"><li>Defined and established 10+ key success metrics for the Mission Critical Program (MCP), giving leadership quantifiable evidence of program ROI.</li><li>Presented progress against those success metrics in executive presentations to Senior Directors.</li><li>Tracked the project end-to-end in Azure DevOps (work items, sprints, burndown charts) and presented findings to cross-functional stakeholders.</li><li>Built an interactive Power BI dashboard using DAX measures and data modeling for automated data collection and analysis.</li><li>Received a full-time return offer based on strong delivery and stakeholder feedback.</li></ul></div></details></li>
-          <li><img class="org-logo" src="images/logos/arizona.png" alt="University of Arizona logo"><details class="job"><summary><span class="when">Oct 2022 – Aug 2023</span><h4>Student Business Analyst, University of Arizona Information Technology (IT) Services</h4><span class="job-line">Requirements, decision logs and a phone migration across 20+ university units.</span></summary><div class="job-body"><ul class="job-points"><li>Summarized business requirements and user feedback for the ServiceNow Telecommunications Service Management application, translating needs into functional specifications.</li><li>Prepared project meeting notes, decision logs and action items for documentation and cross-team collaboration.</li><li>Worked with large datasets to extract information for business process analysis, identifying inefficiencies and recommending improvements.</li><li>Reconciled phone lists and prepared departments to move to Zoom Phone, a migration affecting quarterly, semi-annual and annual goals across 20+ university units.</li></ul></div></details></li>
-          <li><img class="org-logo" src="images/logos/jio.png" alt="Jio logo"><details class="job"><summary><span class="when">Sep 2020 – Jun 2022</span><h4>Software Development Engineer / Product Manager, Jio Platforms (Reliance Industries)</h4><span class="job-line">Owned mobile feature planning and release readiness for JioMart Express, and led validation across five commerce products.</span></summary><div class="job-body"><ul class="job-points"><li>Owned mobile feature planning and release criteria for the JioMart Express launch, which offered grocery delivery in 2-3 hours instead of 2-3 days.</li><li>Owned the product roadmap and feature prioritization for three consumer mobile apps (JioMart, JioMart Express and MyJio-Mart), serving millions of daily active users across India.</li><li>Used Firebase, CleverTap, Google Analytics and Google Data Studio for adoption and funnel analysis and A/B testing.</li><li>As Assistant Manager (Jan-Dec 2021), served as Service Validation Lead for New Commerce and JioEngage, leading validation for five commerce products across 100+ team members.</li><li>As Software Development Engineer (Sep-Dec 2020), worked across product, engineering and QA to analyze quality defects and consumer complaints, and built testing and defect-tracking workflows supporting consumer quality SLAs.</li></ul></div></details></li>
-          <li><img class="org-logo" src="images/logos/siemens.png" alt="Siemens logo"><details class="job"><summary><span class="when">Jun 2019 – Jul 2019</span><h4>Engineer Intern, Siemens</h4><span class="job-line">Designed 50+ data models and SQL queries to find anomalies in industrial monitoring data.</span></summary><div class="job-body"><ul class="job-points"><li>Designed 50+ data models to organize operational information from SCADA (Supervisory Control and Data Acquisition) and PLCC (Power Line Carrier Communication) systems.</li><li>Wrote extensive SQL queries to find data anomalies and correct them, improving data integrity across industrial monitoring systems.</li><li>Studied sub-station automation, sub-station networking, fiber optic tele-protection couplers and digital power line carrier communication.</li></ul></div></details></li>
+          <li data-start="2025.58" data-year="2025" data-short="Microsoft SWE"><img class="org-logo" src="images/logos/microsoft.svg" alt="Microsoft logo"><details class="job"><summary><span class="when">Aug 2025 – Present</span><h4>Software Engineer, Microsoft</h4><span class="job-line">Owns the executive reliability scorecard and builds the reporting and pipelines behind it.</span></summary><div class="job-body"><ul class="job-points"><li>Own the monthly executive reliability scorecard (12+ KPIs) for CVP and senior leadership and present it in leadership-team (LT) reviews; align 6+ teams on metric definitions, data validation and semi-annual targets.</li><li>Reduced first-draft preparation time for monthly leadership summaries from about a day to 1-2 hours using scorecard data.</li><li>Built and launched client-facing reporting for 25-30 Azure services, enabling four organizations to review site reliability engineering work and compare progress across eight service groups.</li><li>Build data pipelines with Python-based Azure Functions and SQL/KQL across Azure Data Explorer, Synapse, Dataverse and Blob Storage, and mine reliability data for recurring patterns.</li><li>Implement LLM-assisted workflows (Microsoft Copilot, prompt engineering) for AI-generated summaries, outage narratives and natural-language querying of operational data.</li></ul></div></details></li>
+          <li data-start="2024.08" data-year="2024" data-short="Microsoft TPM"><img class="org-logo" src="images/logos/microsoft.svg" alt="Microsoft logo"><details class="job"><summary><span class="when">Feb 2024 – Aug 2025</span><h4>Technical Program Manager, Microsoft (Azure Cloud Reliability and Quality)</h4><span class="job-line">Led cross-team reporting and delivery for Azure reliability: planning-tool alignment, incident coordination and Power BI reporting for executive reviews.</span></summary><div class="job-body"><ul class="job-points"><li>Aligned program owners on requirements and common field definitions across nine planning tools as planning shifted from 12-week to 10-week cycles, then to continuous planning.</li><li>Resolved 20+ cross-team incidents and escalations by tracing failures, including broken ingestion pipelines, and coordinating fixes with the responsible teams; combined security and quality work items into role-based reports for three partner organizations.</li><li>Introduced Copilot-assisted workflows for code reviews, data analysis and document drafting to improve recurring engineering and program execution; ranked recurring developer concerns from survey feedback against satisfaction trends for engineering standards owners.</li><li>Partnered with 5+ program owners to translate business questions and success metrics into Power BI reporting for quarterly executive reviews, maintaining program health, resource and milestone reporting across a portfolio of 30+ dashboards (DAX measures, paginated reports, interactive views).</li><li>Supported planning cadences, risk registers and enterprise security requirements for reporting and data workflows (data classification, access controls, pipeline security); investigated reporting interruptions, partnered on ingestion and data-freshness improvements, and used SQL/KQL to generate operational insights.</li></ul></div></details></li>
+          <li data-start="2023.58" data-year="2023" data-short="Teaching Assistant"><img class="org-logo" src="images/logos/arizona.png" alt="University of Arizona logo"><details class="job"><summary><span class="when">Aug 2023 – Dec 2023</span><h4>Graduate Teaching Assistant, University of Arizona (Eller College of Management)</h4><span class="job-line">Assisted two graduate courses: strategic communication, and data communications and networking.</span></summary><div class="job-body"><ul class="job-points"><li>MIS 509 Strategic Communication (Aug-Dec 2023): supported a graduate course on data visualization, storytelling and executive presentation skills.</li><li>Mentored 50+ students on professional communication and data storytelling, with individual feedback on presentations and visualizations.</li><li>Managed and monitored 4 project teams (16 students) in Azure DevOps, overseeing sprint progress, client engagements and final deliverables.</li><li>Data Communications and Networking (Oct-Dec 2023): built hands-on labs using Wireshark for packet analysis and Python scripts for network automation demonstrations.</li><li>Contributed to cost-benefit analyses for proposed networking solutions as part of coursework design.</li></ul></div></details></li>
+          <li data-start="2023.33" data-year="2023" data-short="Microsoft TPM Intern"><img class="org-logo" src="images/logos/microsoft.svg" alt="Microsoft logo"><details class="job"><summary><span class="when">May 2023 – Aug 2023</span><h4>Technical Program Manager Intern, Microsoft</h4><span class="job-line">Defined success metrics and a Power BI dashboard for a mission-critical program; received a full-time return offer.</span></summary><div class="job-body"><ul class="job-points"><li>Defined and established 10+ key success metrics for the Mission Critical Program (MCP), giving leadership quantifiable evidence of program ROI.</li><li>Presented progress against those success metrics in executive presentations to Senior Directors.</li><li>Tracked the project end-to-end in Azure DevOps (work items, sprints, burndown charts) and presented findings to cross-functional stakeholders.</li><li>Built an interactive Power BI dashboard using DAX measures and data modeling for automated data collection and analysis.</li><li>Received a full-time return offer based on strong delivery and stakeholder feedback.</li></ul></div></details></li>
+          <li data-start="2022.75" data-year="2022" data-short="UA Business Analyst"><img class="org-logo" src="images/logos/arizona.png" alt="University of Arizona logo"><details class="job"><summary><span class="when">Oct 2022 – May 2023</span><h4>Student Business Analyst, University of Arizona Information Technology (IT) Services</h4><span class="job-line">Requirements, decision logs and a phone migration across 20+ university units.</span></summary><div class="job-body"><ul class="job-points"><li>Summarized business requirements and user feedback for the ServiceNow Telecommunications Service Management application, translating needs into functional specifications.</li><li>Prepared project meeting notes, decision logs and action items for documentation and cross-team collaboration.</li><li>Worked with large datasets to extract information for business process analysis, identifying inefficiencies and recommending improvements.</li><li>Reconciled phone lists and prepared departments to move to Zoom Phone, a migration affecting quarterly, semi-annual and annual goals across 20+ university units.</li></ul></div></details></li>
+          <li data-start="2020.67" data-year="2020" data-short="Jio SDE / PM"><img class="org-logo" src="images/logos/jio.png" alt="Jio logo"><details class="job"><summary><span class="when">Sep 2020 – Jun 2022</span><h4>Software Development Engineer / Product Manager, Jio Platforms (Reliance Industries)</h4><span class="job-line">Owned mobile feature planning and release readiness for JioMart Express, and led validation across five commerce products.</span></summary><div class="job-body"><ul class="job-points"><li>Owned mobile feature planning and release criteria for the JioMart Express launch, which offered grocery delivery in 2-3 hours instead of 2-3 days.</li><li>Owned the product roadmap and feature prioritization for the JioMart, JioMart Express and MyJio-Mart mobile apps.</li><li>Ran statistical and funnel analysis on adoption data from Firebase, CleverTap, Google Analytics and A/B tests, then worked with Jio product and technology teams on the new commerce app to act on the findings, at times leading and motivating those teams.</li><li>As Software Development Engineer - Assistant Manager (Jan-Dec 2021), served as Service Validation Lead for New Commerce and JioEngage, leading validation for five commerce products across 100+ team members.</li><li>As Software Development Engineer / Product Manager (Sep-Dec 2020), worked across product, engineering and QA to analyze quality defects and consumer complaints, and built testing and defect-tracking workflows supporting consumer quality SLAs.</li></ul></div></details></li>
+          <li data-start="2019.42" data-year="2019" data-short="Siemens Intern"><img class="org-logo" src="images/logos/siemens.png" alt="Siemens logo"><details class="job"><summary><span class="when">Jun 2019 – Jul 2019</span><h4>Engineer Intern, Siemens</h4><span class="job-line">Designed 50+ data models and SQL queries to find anomalies in industrial monitoring data.</span></summary><div class="job-body"><ul class="job-points"><li>Designed 50+ data models to organize operational information from SCADA (Supervisory Control and Data Acquisition) and PLCC (Power Line Carrier Communication) systems.</li><li>Wrote extensive SQL queries to find data anomalies and correct them, improving data integrity across industrial monitoring systems.</li><li>Studied sub-station automation, sub-station networking, fiber optic tele-protection couplers and digital power line carrier communication.</li></ul></div></details></li>
+          <li data-start="2018.42" data-year="2018" data-short="Tata Power Intern"><img class="org-logo" src="images/logos/tata-power.png" alt="Tata Power logo"><details class="job"><summary><span class="when">Jun 2018 – Jul 2018</span><h4>Summer Engineering Intern, Tata Power</h4><span class="job-line">Studied the fiber optic telecom network, SCADA systems and metering platforms behind power distribution.</span></summary><div class="job-body"><ul class="job-points"><li>Studied Tata Power's fiber optic telecommunication network, a large-scale industrial communication infrastructure.</li><li>Took part in maintenance work on the telecommunication system that supports power distribution operations.</li><li>Studied Supervisory Control and Data Acquisition (SCADA) systems used to operate the electrical network remotely.</li><li>Gained exposure to Automatic Meter Reading (AMR) and Geographic Information System (GIS) platforms used in power distribution.</li></ul></div></details></li>
         </ol>
       </div>
 
       <div class="qual-col">
         <h3 class="col-title"><i class='bx bxs-graduation'></i> Education</h3>
         <div class="edu-list">
-          <div class="edu-card">
+          <div class="edu-card" data-start="2023.92" data-year="2023" data-short="Graduated M.S., Arizona" data-began="2022.58" data-began-year="2022" data-began-short="Started M.S., Arizona">
             <img class="org-logo" src="images/logos/arizona.png" alt="University of Arizona logo">
             <dl>
-              <div><dt>Degree</dt><dd>M.S. (Master of Science)</dd></div>
-              <div><dt>Major</dt><dd>Management Information Systems</dd></div>
+              <div><dt>Degree</dt><dd>Master of Science in Management Information Systems</dd></div>
               <div><dt>University</dt><dd>University of Arizona, Eller College of Management</dd></div>
               <div><dt>Concentrations</dt><dd>Business Intelligence and Analytics; Security and Information Assurance</dd></div>
               <div><dt>Honors</dt><dd>Dean's List: Fall 2022, Spring 2023, Fall 2023</dd></div>
+              <div><dt>Start Year</dt><dd>2022</dd></div>
               <div><dt>Graduation Year</dt><dd>2023</dd></div>
             </dl>
           </div>
-          <div class="edu-card">
+          <div class="edu-card" data-start="2020.5" data-year="2020" data-short="Graduated B.E., Mumbai" data-began="2016.42" data-began-year="2016" data-began-short="Started B.E., Mumbai">
             <img class="org-logo" src="images/logos/mumbai.png" alt="University of Mumbai coat of arms">
             <dl>
-              <div><dt>Degree</dt><dd>B.E. (Bachelor of Engineering)</dd></div>
-              <div><dt>Major</dt><dd>Electronics and Telecommunications</dd></div>
+              <div><dt>Degree</dt><dd>Bachelor of Engineering in Electronics and Telecommunications</dd></div>
               <div><dt>University</dt><dd>University of Mumbai</dd></div>
+              <div><dt>Start Year</dt><dd>2016</dd></div>
               <div><dt>Graduation Year</dt><dd>2020</dd></div>
             </dl>
           </div>
@@ -382,44 +393,51 @@
     <div class="heading">
       <span class="label">Projects</span>
       <h2>Projects and Publication</h2>
-      <p class="section-intro">Published research, project work and earlier academic projects. Swipe or use the arrows to browse.</p>
+      <p class="section-intro">Client consulting, analytics projects and published research. Swipe or use the arrows to browse.</p>
     </div>
 
-    <div class="coverflow" data-cf data-height="380" data-autoplay aria-roledescription="carousel" aria-label="Projects">
-      <article class="card project">
-        <span class="tag">Jul 2019 – Jun 2020 · Published May 2020</span>
-        <h3>Smart and Secure Locker System</h3>
-        <p>Built a smart locker with multi-factor authentication (field-programmable gate array (FPGA) and radio-frequency identification (RFID)) and Internet of Things (IoT) alerts. Computer vision and a Raspberry Pi flag unauthorized users within 14 seconds and send image alerts for remote approval or denial. Published on the Social Science Research Network (SSRN).</p>
-        <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3597444" target="_blank" rel="noopener">Read the publication on SSRN →</a></p>
-        </article>
-      <article class="card project">
-        <span class="tag">Jan – Oct 2023 · Team lead</span>
+    <div class="coverflow" data-cf data-height="540" data-autoplay aria-roledescription="carousel" aria-label="Projects">
+      <article class="card project" data-tracks="consult">
+        <span class="tag">Client consulting engagement · Jan – Oct 2023 · Team lead</span>
         <h3>Rotary District 5500 consulting engagement</h3>
+        <figure class="project-flow"><img src="visuals/projects/rotary.svg" alt="Flow: Stakeholder interviews, partnership plan, member guides" loading="lazy"></figure>
         <p>Led a 10-month consulting engagement for Rotary: a plan for clubs to partner with local businesses, built on stakeholder interviews with club presidents and business leaders.</p>
+        </article>
+      <article class="card project" data-tracks="consult">
+        <span class="tag">Data analytics challenge · Aug 2022</span>
+        <h3>NYC 311 analytics challenge for Tucson</h3>
+        <figure class="project-flow"><img src="visuals/projects/nyc-311.svg" alt="Flow: NYC 311 data, Tucson patterns, recommendations" loading="lazy"></figure>
+        <p>Analyzed NYC 311 service data in Excel and Tableau and made recommendations to the Tucson Police Department: a redesigned 311 architecture for Tucson, including non-emergency call types that could move off the 911 line.</p>
         </article>
       <article class="card project">
         <span class="tag">Oct – Dec 2022</span>
         <h3>Restaurant customer churn prediction</h3>
+        <figure class="project-flow"><img src="visuals/projects/restaurant-churn.svg" alt="Flow: 900+ reviews, churn models, retention insight" loading="lazy"></figure>
         <p>Engineered features from 900+ unstructured restaurant reviews, built neural network and k-nearest neighbor (KNN) models to forecast churn, and visualized seasonal retention trends in R.</p>
+        </article>
+      <article class="card project">
+        <span class="tag">Jul 2019 – Jun 2020 · Published May 2020</span>
+        <h3>Smart and Secure Locker System</h3>
+        <figure class="project-flow"><img src="visuals/projects/smart-locker.svg" alt="Flow: Detect, authenticate, alert" loading="lazy"></figure>
+        <p>Built a smart locker with multi-factor authentication (field-programmable gate array (FPGA) and radio-frequency identification (RFID)) and Internet of Things (IoT) alerts. Computer vision and a Raspberry Pi flag unauthorized users within 14 seconds and send image alerts for remote approval or denial. Published on the Social Science Research Network (SSRN).</p>
+        <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3597444" target="_blank" rel="noopener">Read the publication on SSRN →</a></p>
         </article>
       <article class="card project">
         <span class="tag">Aug – Dec 2022 · Six-person team</span>
         <h3>Football data management system</h3>
+        <figure class="project-flow"><img src="visuals/projects/football-data.svg" alt="Flow: Requirements, relational design, application" loading="lazy"></figure>
         <p>Gathered requirements and designed a relational system for a football association's research and performance data, then built a full-stack .NET and Oracle application for retrieval and reporting.</p>
-        </article>
-      <article class="card project">
-        <span class="tag">Aug 2022</span>
-        <h3>NYC 311 analysis for Tucson</h3>
-        <p>Analyzed NYC 311 service data in Excel and Tableau, and proposed a redesigned 311 architecture for Tucson, including non-emergency call types that could move off the 911 line.</p>
         </article>
       <article class="card project">
         <span class="tag">Aug – Oct 2019</span>
         <h3>Telecom customer churn analysis</h3>
+        <figure class="project-flow"><img src="visuals/projects/telecom-churn.svg" alt="Flow: Usage data, segments, churn risk" loading="lazy"></figure>
         <p>Analyzed voice, text message (SMS) and internet usage across large telecom datasets, clustered customers for tailored retention offers, and predicted churn for high-value customers.</p>
         </article>
       <article class="card project">
         <span class="tag">Jan – Apr 2019</span>
         <h3>Company database design</h3>
+        <figure class="project-flow"><img src="visuals/projects/company-db.svg" alt="Flow: Requirements, E-R model, SQL queries" loading="lazy"></figure>
         <p>Designed a company database, from entity-relationship (E-R) diagrams to a normalized relational schema, with SQL queries.</p>
         </article>
     </div>
